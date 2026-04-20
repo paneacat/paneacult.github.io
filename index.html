@@ -6,112 +6,177 @@
   <title>paneacult</title>
 
   <style>
-    :root {
-      --gold: #ffbf00;
-      --blue: #1b465b;
-      --dark: #0f1720;
-      --card: #16202a;
-      --text: #e6edf3;
-    }
+    /* ====== VARIABILI ====== */
+:root {
+  --gold: #ffbf00;
+  --blue: #1b465b;
+  --dark: #0f1720;
+  --card: #16202a;
+  --text: #e6edf3;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--dark);
-      color: var(--text);
-    }
+/* ====== BASE ====== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--dark);
+  color: var(--text);
+}
 
-    header {
-      background: linear-gradient(90deg, var(--blue), #0d2c3a);
-      padding: 30px;
-      text-align: center;
-      border-bottom: 2px solid var(--gold);
-    }
+/* ====== HEADER ====== */
+header {
+  background: linear-gradient(90deg, var(--blue), #0d2c3a);
+  padding: 30px;
+  text-align: center;
+  border-bottom: 2px solid var(--gold);
+}
 
-    header h1 {
-      margin: 0;
-      color: var(--gold);
-      letter-spacing: 1px;
-    }
+header h1 {
+  margin: 0;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
 
-    header p {
-      margin-top: 8px;
-      opacity: 0.8;
-    }
+header p {
+  margin-top: 8px;
+  opacity: 0.8;
+}
 
-    main {
-      padding: 25px;
-      max-width: 800px;
-      margin: auto;
-    }
+/* ====== LAYOUT ====== */
+main {
+  padding: 25px;
+  max-width: 900px;
+  margin: auto;
+}
 
-    .recensione {
-      background: var(--card);
-      margin-bottom: 30px;
-      border-radius: 12px;
-      overflow: hidden;
-      border-left: 4px solid var(--gold);
-      transition: 0.2s;
-    }
+/* ====== CARD LINK ====== */
+.link-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 
-    .recensione:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-    }
+/* ====== CARD ====== */
+.recensione {
+  background: var(--card);
+  margin-bottom: 30px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.25s ease;
+  position: relative;
+}
 
-    .cover {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      filter: brightness(0.85);
-    }
+.recensione:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border-color: rgba(255,191,0,0.3);
+}
 
-    .contenuto {
-      padding: 20px;
-    }
+/* ====== IMMAGINE ====== */
+.cover {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.75);
+  transition: 0.3s;
+}
 
-    .titolo {
-      font-size: 22px;
-      margin-bottom: 5px;
-      color: white;
-    }
+.recensione:hover .cover {
+  filter: brightness(0.9);
+  transform: scale(1.02);
+}
 
-    .meta {
-      font-size: 13px;
-      opacity: 0.6;
-      margin-bottom: 10px;
-    }
+/* ====== CONTENUTO ====== */
+.contenuto {
+  padding: 20px;
+}
 
-    .stelle {
-      color: var(--gold);
-      font-size: 18px;
-      letter-spacing: 3px;
-      margin-bottom: 10px;
-    }
+.titolo {
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: white;
+}
 
-    .recensione p {
-      line-height: 1.6;
-      font-size: 15px;
-    }
+.meta {
+  font-size: 13px;
+  opacity: 0.5;
+  margin-bottom: 12px;
+}
 
-    .firma {
-      margin-top: 15px;
-      font-size: 13px;
-      opacity: 0.7;
-      text-align: right;
-      border-top: 1px solid #222;
-      padding-top: 10px;
-    }
+/* ====== STELLE ====== */
+.stelle {
+  color: var(--gold);
+  font-size: 16px;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+}
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      border-top: 1px solid #222;
-      margin-top: 30px;
-      font-size: 14px;
-      opacity: 0.7;
-    }
+/* ====== TESTO ====== */
+.mini {
+  opacity: 0.75;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* ====== CTA ====== */
+.leggi {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--gold);
+  transition: 0.2s;
+}
+
+.recensione:hover .leggi {
+  letter-spacing: 1px;
+}
+
+/* ====== PAGINA ARTICOLO ====== */
+.article {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.article img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.article h1 {
+  color: var(--gold);
+}
+
+.article p {
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* ====== BACK LINK ====== */
+.back {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--gold);
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.back:hover {
+  opacity: 1;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #222;
+  margin-top: 40px;
+  font-size: 14px;
+  opacity: 0.6;
+}
   </style>
 </head>
 
