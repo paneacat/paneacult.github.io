@@ -1,226 +1,131 @@
 <!DOCTYPE html>
+<div class="article">
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>paneacult</title>
+  <title>Il grande Dittatore</title>
 
   <style>
-    :root {
-      --gold: #ffbf00;
-      --blue: #1b465b;
-      --dark: #0f1720;
-      --card: #16202a;
-      --text: #e6edf3;
-    }
-
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: var(--dark);
-      color: var(--text);
-    }
-
-    header {
-      background: linear-gradient(90deg, var(--blue), #0d2c3a);
-      padding: 30px;
-      text-align: center;
-      border-bottom: 2px solid var(--gold);
-    }
-
-    header h1 {
-      margin: 0;
-      color: var(--gold);
-    }
-
-    main {
-      padding: 25px;
-      max-width: 1100px;
+      background: #0f1720;
+      color: #e6edf3;
+      max-width: 800px;
       margin: auto;
-      display: grid;
-      gap: 20px;
-    }
-
-    @media (min-width: 600px) {
-      main { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (min-width: 900px) {
-      main { grid-template-columns: 1fr 1fr 1fr; }
-    }
-
-    .filtri {
-      grid-column: 1 / -1;
-      display: flex;
-      gap: 10px;
-      margin-bottom: 10px;
-      flex-wrap: wrap;
-    }
-
-    .filtri button {
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.2);
-      color: white;
-      padding: 8px 14px;
-      border-radius: 20px;
-      cursor: pointer;
-    }
-
-    .filtri .attivo {
-      background: var(--gold);
-      color: black;
-    }
-
-    .link-card {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .recensione {
-      background: var(--card);
-      border-radius: 14px;
-      overflow: hidden;
-      transition: 0.2s;
-    }
-
-    .recensione:hover {
-      transform: translateY(-4px);
-    }
-
-    .cover {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      filter: brightness(0.75);
-    }
-
-    .contenuto {
       padding: 20px;
     }
 
-    .rubrica {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--gold);
-      margin-bottom: 5px;
-    }
-
-    .titolo {
-      margin: 0;
-      font-size: 18px;
+    h1 {
+      color: #ffbf00;
     }
 
     .meta {
       opacity: 0.6;
-      font-size: 13px;
       margin-bottom: 10px;
     }
 
     .stelle {
-      color: var(--gold);
-      margin-bottom: 10px;
+      color: #ffbf00;
+      margin-bottom: 20px;
     }
 
-    .mini {
-      font-size: 14px;
-      opacity: 0.8;
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
 
-    .leggi {
+    p {
+      line-height: 1.6;
+    }
+
+    .back {
       display: inline-block;
-      margin-top: 10px;
-      color: var(--gold);
-      font-size: 13px;
+      margin-top: 20px;
+      color: #ffbf00;
+      text-decoration: none;
     }
+    .nav-articoli {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 40px;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      opacity: 0.6;
-    }
-    /* rimuove stile link da tutta la card */
-.link-card,
-.link-card * {
-  color: inherit;
+.nav-card {
+  flex: 1;
+  padding: 15px;
+  border-radius: 10px;
+  background: #16202a;
+  border: 1px solid rgba(255,255,255,0.05);
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.nav-card:hover {
+  border-color: rgba(255,191,0,0.4);
+  transform: translateY(-2px);
+}
+
+.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+    .article a {
+  color: var(--gold);
   text-decoration: none;
 }
 
-/* evita viola dopo click */
-.link-card:visited {
-  color: inherit;
+.article a:hover {
+  text-decoration: underline;
 }
   </style>
 </head>
 
 <body>
+<a href="dittatore.html" class="link-card resta">
+  <img src="img/Grandedittatore2.jpg">
 
-<header>
-  <h1>paneacult</h1>
-  <p>My therapist says cinema</p>
-</header>
+  <h1>Cinema che resta </h1>
+  <h2>#1 Il grande Dittatore</h2>
+  <p class="meta">Charlie Chaplin (1940)</p>
 
-<main>
+  <div class="stelle">★★★★★</div>
 
-  <!-- FILTRI -->
-  <div class="filtri">
-    <button onclick="filtra('tutti', this)" class="attivo">Tutti</button>
-    <button onclick="filtra('resta', this)">Cinema che resta</button>
-    <button onclick="filtra('contemporanei', this)">Sguardi contemporanei</button>
-  </div>
+  <p>
+    Questo mi è sembrato il punto di partenza naturale per la rubrica “Cinema che resta". Alcuni film rimangono nella storia per sempre. È il caso del settimo lungometraggio del grande Charlie Chaplin: sceneggiatore, regista, musicista, produttore e interprete principale di questa pellicola.  
+  </p>
 
-  <!-- CARD 1 -->
-  <a href="dittatore.html" class="link-card resta">
-    <div class="recensione">
-      <img class="cover" src="img/Grandedittatore2.jpg">
-      <div class="contenuto">
-        <p class="rubrica">Cinema che resta</p>
-        <h2 class="titolo">#1 Il grande Dittatore</h2>
-        <p class="meta">Charlie Chaplin (1940)</p>
-        <div class="stelle">★★★★★</div>
-        <p class="mini">Una satira potentissima che ridicolizza il nazismo.</p>
-        <span class="leggi">Leggi recensione →</span>
-      </div>
-    </div>
+  <p>
+    Protagonista delle vicende è un barbiere ebreo (Charlie Chaplin) di una cittadina tedesca. La sua peculiarità? Somiglia in modo impressionante ad Adenoid Hynkel (aka Adolf Hitler, interpretato dallo stesso Chaplin), dittatore sanguinario salito al potere e promotore di una feroce campagna razzista. Tra situazioni comiche, cospirazioni, equivoci, e uno scambio rocambolesco, il barbiere si troverà a impersonare proprio il malvagio dittatore, raggiungendo l’apice con il famoso "Discorso all’umanità", incentrato su valori quali libertà e uguaglianza.   
+  </p>
+
+  <p>
+    Un film che, attraverso la satira, mostra il lato più ridicolo del nazismo, senza dimenticare di educare, prendendo in giro usi e personalità del tempo (come Benito Mussolini), e creando un’opera coraggiosa e senza pari. 
+  </p>
+
+  <p>
+  Menzione d’onore per la "scena del mappamondo", con Wagner in sottofondo, potente come poche altre. 
+  </p>
+<p> Un film imperdibile, unico, ingombrante, divertente, riflessivo, simbolico, che tenta di mettere in guardia sul marcio del mondo e sul potere distruttivo dell’intolleranza. 
+  Non ci sono altre parole per una pellicola che riesce ancora a essere, a distanza di 86 anni, attuale ed emozionante.
+  <p><strong>— Patrizia Catania · paneacult</strong></p>
+<a href="index.html" class="back">← Torna alla home</a>
+
+  <a href="#" class="nav-card disabled">
+    ← Articolo precedente
   </a>
-
-  <!-- CARD 2 -->
-  <a href="uncut.html" class="link-card contemporanei">
-    <div class="recensione">
-      <img class="cover" src="img/uncut.jpg">
-      <div class="contenuto">
-        <p class="rubrica">Sguardi contemporanei</p>
-        <h2 class="titolo">#1 Uncut Gems</h2>
-        <p class="meta">Safdie Brothers (2019)</p>
-        <div class="stelle">★★★★☆</div>
-        <p class="mini">Un’esperienza ansiogena e magnetica.</p>
-        <span class="leggi">Leggi recensione →</span>
-      </div>
-    </div>
-  </a>
-
-</main>
-
-<footer>
+<a href="uncut.html" class="nav-card">
+  → Uncut Gems
+</a>
+</a>
+ </div>
+  <footer>
   <p>&copy; 2026 paneacult</p>
-</footer>
-
-<script>
-function filtra(categoria, btn) {
-  const cards = document.querySelectorAll('.link-card');
-  const bottoni = document.querySelectorAll('.filtri button');
-
-  bottoni.forEach(b => b.classList.remove('attivo'));
-  btn.classList.add('attivo');
-
-  cards.forEach(card => {
-    if (categoria === 'tutti') {
-      card.style.display = '';
-    } else {
-      card.style.display = card.classList.contains(categoria) ? '' : 'none';
-    }
-  });
-}
-</script>
+  </footer>
 </body>
-</html>
+</html>  
