@@ -1,55 +1,77 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Il grande Dittatore</title>
+
+<title>Il grande dittatore</title>
 
 <style>
-:root { --gold:#ffbf00; }
 
-body { margin:0; font-family:'Georgia', serif; background:#0f1720; color:#e6edf3; }
+/* STILE ARTICOLO */
+body {
+  margin:0;
+  font-family:Georgia, serif;
+  background:#0b1620;
+  color:#e6edf3;
+}
 
-.hero { height:260px; position:relative; }
-.hero img { width:100%; height:100%; object-fit:cover; filter:brightness(0.5); }
+.hero img {
+  width:100%;
+  height:300px;
+  object-fit:cover;
+}
 
-.hero-content { position:absolute; bottom:20px; left:20px; }
+.container {
+  max-width:800px;
+  margin:auto;
+  padding:20px;
+}
 
-.categoria { color:var(--gold); font-size:11px; letter-spacing:2px; }
+h1 {
+  color:#ffbf00;
+}
 
-.container { max-width:750px; margin:auto; padding:20px; }
+/* NAVIGAZIONE */
+.nav {
+  display:flex;
+  gap:10px;
+  margin-top:40px;
+}
 
-p { line-height:1.8; margin-bottom:18px; }
-
-.stelle { color:var(--gold); margin-bottom:20px; }
-
-.btn {
-  display:block;
+.nav a {
+  flex:1;
   text-align:center;
-  margin-top:20px;
   padding:14px;
-  border:1px solid var(--gold);
+  border:1px solid #ffbf00;
   border-radius:10px;
-  color:var(--gold);
+  color:#ffbf00;
   text-decoration:none;
 }
+
+.nav a:hover {
+  background:#ffbf00;
+  color:black;
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- IMMAGINE -->
 <div class="hero">
-<img src="img/Grandedittatore2.jpg">
-<div class="hero-content">
-<div class="categoria">Cinema che resta</div>
-<h1>Il grande Dittatore</h1>
-<p>Charlie Chaplin (1940)</p>
-</div>
+  <img src="./img/Grandedittatore2.jpg">
 </div>
 
+<!-- CONTENUTO -->
 <div class="container">
 
-<div class="stelle">★★★★★</div>
+  <h1>Titolo Film</h1>
+  <p><i>Charlie Chaplin (1950)</i></p>
+
+  <div class="stelle">★★★★★</div>
 
 <p>Questo film mi è sembrato il punto di partenza naturale per la rubrica “Cinema che resta”.</p>
 
@@ -65,7 +87,11 @@ p { line-height:1.8; margin-bottom:18px; }
 
 <p>Un film imperdibile, ancora attuale ed emozionante.</p>
 
-<a href="index.html" class="btn">← Torna alla home</a>
+  <!-- NAV -->
+  <div class="nav">
+    <a href="pagina-precedente.html">← Precedente</a>
+    <a href="pagina-successiva.html">Successivo →</a>
+  </div>
 
 </div>
 
