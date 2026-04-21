@@ -75,6 +75,54 @@ a:visited {
 .nav a:hover {
   opacity: 1;
 }
+  .banner-link {
+  max-width: 900px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+}
+
+.banner-link a {
+  display: block;
+  padding: 30px 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.banner-link a:hover {
+  transform: translateY(-2px);
+}
+
+.banner-content {
+  text-align: center;
+}
+
+.banner-eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.banner-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.banner-cta {
+  font-size: 13px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.banner-link a:hover .banner-cta {
+  opacity: 1;
+  color: var(--gold);
+}
 
 /* ===== FILTRI ===== */
 
@@ -257,12 +305,18 @@ footer {
 </div>
 
 <!-- FEATURED -->
-<section class="featured">
-  <a href="featured.html">
-    <img src="img/featured.jpg">
+<section class="banner-link">
+  <a href="about.html">
+    <div class="banner-content">
+      <p class="banner-eyebrow">paneacult</p>
 
-    <h2>Recensioni senza spoiler!</h2>
-    <p>by Patrizia Catania</p>
+      <h2>
+        Il cinema non è intrattenimento.<br>
+        È ciò che resta.
+      </h2>
+
+      <span class="banner-cta">Chi sono →</span>
+    </div>
   </a>
 </section>
 
