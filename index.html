@@ -132,12 +132,7 @@
       .grid {
         grid-template-columns: 1fr;
       }
-    }
 .filtro {
-  transition: all 0.3s ease;
-  border: 1px solid transparent;
-}
-    .filtro {
   background: transparent;
   color: white;
   border: 1px solid transparent;
@@ -146,13 +141,13 @@
   transition: all 0.25s ease;
 }
 
-/* HOVER */
+/* effetto hover */
 .filtro:hover {
   color: #ffbf00;
   text-shadow: 0 0 6px rgba(255,191,0,0.6);
 }
 
-/* ATTIVO (cliccato) */
+/* stato attivo */
 .filtro.attivo {
   color: #ffbf00;
   border-color: #ffbf00;
@@ -175,6 +170,12 @@
     <button onclick="filtra('tutti')">Tutti</button>
     <button onclick="filtra('resta')">Cinema che resta</button>
     <button onclick="filtra('contemporanei')">Contemporanei</button>
+  </div>
+  <div class="filtri">
+  <button class="filtro attivo">Tutti</button>
+  <button class="filtro">Drama</button>
+  <button class="filtro">Horror</button>
+  <button class="filtro">Comedy</button>
   </div>
 
   <!-- ARTICOLI -->
@@ -220,18 +221,14 @@
   </footer>
 
   <script>
-    function filtra(tag) {
-      const cards = document.querySelectorAll('.card');
+const filtri = document.querySelectorAll('.filtro');
 
-      cards.forEach(card => {
-        if (tag === 'tutti' || card.dataset.tags.includes(tag)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
+filtri.forEach(filtro => {
+  filtro.addEventListener('click', () => {
+    filtri.forEach(f => f.classList.remove('attivo'));
+    filtro.classList.add('attivo');
+  });
+});
   </script>
-
 </body>
 </html>
