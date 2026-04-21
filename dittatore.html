@@ -1,45 +1,92 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <p class="categoria">Cinema che resta</p>
-<h1>Cinema che resta</h1>
-<h2>#1 Il grande Dittatore</h2>
-<title>Il grande Dittatore</title>
+
+<title>Il grande dittatore - paneacult</title>
 
 <style>
-:root { --gold:#ffbf00; }
-body { margin:0; font-family:'Georgia', serif; background:#0f1720; color:#e6edf3; }
-.container { max-width:800px; margin:auto; padding:20px; }
-h1 { color:var(--gold); }
-.meta { opacity:0.6; margin-bottom:20px; }
-img { width:100%; border-radius:12px; margin-bottom:20px; }
-p { line-height:1.8; margin-bottom:18px; font-size:17px; }
-.stelle { color:var(--gold); margin-bottom:20px; }
-.nav { margin-top:40px; display:flex; flex-direction:column; gap:15px; }
-.btn { text-align:center; padding:16px; border-radius:12px; background:#16202a; color:white; text-decoration:none; }
-.btn.gold { border:1px solid var(--gold); color:var(--gold); }
-footer { text-align:center; padding:20px; opacity:0.6; }
-  .categoria {
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 5px;
-  }
+:root {
+  --gold:#ffbf00;
+  --blue:#5cc8ff;
+}
+
+body {
+  margin:0;
+  font-family:'Georgia', serif;
+  background:#0f1720;
+  color:#e6edf3;
+}
+
+.hero {
+  position:relative;
+  height:320px;
+}
+
+.hero img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(0.5);
+}
+
+.hero-content {
+  position:absolute;
+  bottom:20px;
+  left:20px;
+}
+
+.categoria {
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+
+.container {
+  max-width:800px;
+  margin:auto;
+  padding:20px;
+}
+
+p {
+  line-height:1.8;
+  margin-bottom:18px;
+  font-size:17px;
+}
+
+.stelle {
+  color:var(--gold);
+  margin-bottom:20px;
+}
+
+.btn {
+  display:block;
+  text-align:center;
+  margin-top:30px;
+  padding:15px;
+  border-radius:10px;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  text-decoration:none;
+}
 </style>
 </head>
 
 <body>
 
+<div class="hero">
+  <img src="img/dittatore.jpg">
+  <div class="hero-content">
+    <div class="categoria">Cinema che resta</div>
+    <h1>Il grande dittatore</h1>
+    <div>Charlie Chaplin (1940)</div>
+  </div>
+</div>
+
 <div class="container">
-
-<img src="img/Grandedittatore2.jpg">
-
-<h1>Cinema che resta</h1>
-<h2>#1 Il grande Dittatore</h2>
-<p class="meta">Charlie Chaplin (1940)</p>
 
 <div class="stelle">★★★★★</div>
 
@@ -49,11 +96,11 @@ footer { text-align:center; padding:20px; opacity:0.6; }
 
 <p>Protagonista delle vicende è un barbiere ebreo (<em>Charlie Chaplin</em>) di una cittadina tedesca. La sua peculiarità? Somiglia in modo impressionante ad <strong>Adenoid Hynkel</strong> (aka Adolf Hitler, interpretato dallo stesso Chaplin), dittatore sanguinario salito al potere e promotore di una feroce campagna razzista.</p>
 
-<p>Tra situazioni comiche, cospirazioni, equivoci, e uno scambio rocambolesco, il barbiere si troverà a impersonare proprio il malvagio dittatore, raggiungendo l’apice con il famoso <strong>"Discorso all’umanità"</strong>, incentrato su valori quali libertà e uguaglianza.</p>
+<p>Tra situazioni comiche, cospirazioni, equivoci e uno scambio rocambolesco, il barbiere si troverà a impersonare proprio il malvagio dittatore, raggiungendo l’apice con il famoso “Discorso all’umanità”, incentrato su valori quali <strong>libertà e uguaglianza</strong>.</p>
 
-<p>Un film che, attraverso la satira, mostra il lato più ridicolo del nazismo, senza dimenticare di educare, prendendo in giro usi e personalità del tempo (come Benito Mussolini), e creando un’opera coraggiosa e senza pari.</p>
+<p>Un film che, attraverso la satira, mostra il lato più ridicolo del nazismo, senza dimenticare di <strong>educare</strong>, prendendo in giro usi e personalità del tempo (come Benito Mussolini), e creando un’opera coraggiosa e senza pari.</p>
 
-<p>Menzione d’onore per la "scena del mappamondo", con Wagner in sottofondo, potente come poche altre.</p>
+<p>Menzione d’onore per la “scena del mappamondo”, con Wagner in sottofondo, potente come poche altre.</p>
 
 <p>Un film imperdibile, unico, ingombrante, divertente, riflessivo, simbolico, che tenta di mettere in guardia sul marcio del mondo e sul potere distruttivo dell’intolleranza.</p>
 
@@ -61,16 +108,9 @@ footer { text-align:center; padding:20px; opacity:0.6; }
 
 <p><strong>Patrizia Catania</strong><br><em>paneacult</em></p>
 
-<a href="index.html" class="btn gold">← Torna alla home</a>
-
-<div class="nav">
-  <a class="btn" style="opacity:0.3;pointer-events:none;">← Articolo precedente</a>
-  <a href="uncut.html" class="btn gold">Uncut Gems →</a>
-</div>
+<a href="index.html" class="btn">← Torna alla home</a>
 
 </div>
-
-<footer>© 2026 paneacult</footer>
 
 </body>
 </html>
