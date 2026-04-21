@@ -2,35 +2,57 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>paneacult</title>
 
 <style>
+:root {
+  --bg: #0f1f2a;
+  --gold: #ffbf00;
+  --text: #ffffff;
+}
+
 body {
-  background: #0f1f2a;
-  color: white;
+  margin: 0;
   font-family: Arial, sans-serif;
-  margin: 0;
-  body {
-  background: #0f1f2a;
-  margin: 0;
-  }
+  background: var(--bg);
+  color: var(--text);
 }
-.filtro.attivo {
-  color: #ffbf00;
-  border-color: #ffbf00;
-  box-shadow: 0 0 6px rgba(255,191,0,0.5);
-}
+
 /* HEADER */
-h1 {
+header {
   text-align: center;
-  color: #ffbf00;
-  margin: 20px 0;
-  letter-spacing: 2px;
+  padding: 30px 20px 10px;
 }
+
+h1 {
+  color: var(--gold);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* SOCIAL */
+.social {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.social a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  color: var(--gold);
+  opacity: 1;
+}
+
 /* FILTRI */
 .filtri {
-  text-align: center;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .filtro {
@@ -44,50 +66,54 @@ h1 {
 }
 
 .filtro:hover {
-  color: #ffbf00;
-  text-shadow: 0 0 6px rgba(255,191,0,0.6);
+  color: var(--gold);
 }
 
 .filtro.attivo {
-  color: #ffbf00;
-  border-color: #ffbf00;
-  box-shadow: 0 0 8px rgba(255,191,0,0.7);
+  color: var(--gold);
+  border-color: var(--gold);
+  box-shadow: 0 0 6px rgba(255,191,0,0.5);
 }
 
-/* GRID */
-.container {
+/* SEZIONE CARD */
+.section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
-  padding: 30px;
-  max-width: 1100px;
-  margin: auto;
 }
 
+/* CARD */
 .card {
-  border-radius: 12px;
+  position: relative;
+  display: block;
   overflow: hidden;
-  transition: transform 0.3s;
+  border-radius: 12px;
+  text-decoration: none;
 }
 
 .card img {
   width: 100%;
   height: 320px;
   object-fit: cover;
+  transition: 0.3s;
 }
 
-/* HOVER */
-.card:hover {
-  transform: scale(1.08);
-  z-index: 2;
+.card:hover img {
+  transform: scale(1.05);
 }
 
 .overlay {
   position: absolute;
   bottom: 0;
-  background: linear-gradient(transparent, rgba(0,0,0,0.9));
   width: 100%;
-  padding: 10px;
+  padding: 12px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
   opacity: 0;
   transition: 0.3s;
 }
@@ -103,90 +129,107 @@ h1 {
 
 .overlay p {
   font-size: 12px;
-  color: #ffbf00;
+  color: var(--gold);
 }
 
-/* HIDE */
+/* NASCONDI */
 .nascosta {
   display: none;
 }
-  .social {
-  margin-top: 10px;
-  font-size: 14px;
-}
 
-.social a {
-  margin: 0 8px;
-  opacity: 0.7;
-}
-
-.social a:hover {
-  opacity: 1;
-  color: #ffbf00;
-}
-  .newsletter {
-  max-width: 500px;
-  margin: 40px auto;
-  text-align: center;
-}
-
+/* NEWSLETTER */
 .newsletter {
   max-width: 500px;
-  margin: 60px auto;
+  margin: 80px auto;
   text-align: center;
+}
+
+.newsletter h2 {
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.newsletter p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 12px;
+  opacity: 0.6;
 }
 </style>
 </head>
 
 <body>
-<h1>paneacult</h1>
-<!-- FILTRI RUBRICHE -->
-<div class="filtri">
-  <button class="filtro attivo" data-filtro="tutti">Tutti</button>
-  <button class="filtro" data-filtro="resta">Cinema che resta</button>
-  <button class="filtro" data-filtro="sguardi">Sguardi contemporanei</button>
-</div>
- 
-<div class="social">
-  <a href="https://instagram.com/paneacult_" target="_blank">Instagram</a>
-  <a href="https://paneacult.substack.com" target="_blank">Newsletter</a>
-</div>
-  
-<!-- GRID -->
-<div class="container">
-  <a href="dittatore.html" class="card" data-tag="resta">
-    <img src="img/dittatore.jpg">
-    <div class="overlay">
-      <h3>Il grande dittatore</h3>
-      <p>#cinemacheresta</p>
-    </div>
+
+<header>
+  <h1>paneacult</h1>
+
+  <div class="social">
+    <a href="#">Instagram</a>
+    <a href="#">Newsletter</a>
   </div>
-<a href="uncut.html" class="card" data-tag="resta">
-    <img src="img/uncut.jpg">
-    <div class="overlay">
-    <h3>Uncut Gems</h3>
-      <p>#sguardicontemporanei</p>
-    </div>
+
+  <div class="filtri">
+    <button class="filtro attivo" data-filtro="tutti">Tutti</button>
+    <button class="filtro" data-filtro="resta">Cinema che resta</button>
+    <button class="filtro" data-filtro="sguardi">Sguardi contemporanei</button>
   </div>
-  <a href="tramonto.html" class="card" data-tag="resta">
-    <img src="img/viale-del-tramonto.jpg">
-    <div class="overlay">
-      <h3>Sunset Boulevard</h3>
-      <p>#cinemacheresta</p>
-    </div>
+</header>
+
+<!-- CARD SECTION -->
+<section class="section">
+  <div class="grid">
+
+    <a href="a
+      dittatore.html" class="card" data-tag="resta">
+      <img src="img/dittatore.jpg">
+      <div class="overlay">
+        <h3>Il grande dittatore</h3>
+        <p>#cinemacheresta</p>
+      </div>
+    </a>
+
+    <a href="uncut.html" class="card" data-tag="sguardi">
+      <img src="img/uncut.jpg">
+      <div class="overlay">
+        <h3>Uncut Gems</h3>
+        <p>#sguardicontemporanei</p>
+      </div>
+    </a>
+
+    <a href="tramonto.html" class="card" data-tag="resta">
+      <img src="img/viale-del-tramonto.jpg">
+      <div class="overlay">
+        <h3>Sunset Boulevard</h3>
+        <p>#cinemacheresta</p>
+      </div>
+    </a>
+
   </div>
-  <div class="newsletter">
-  <h2>Iscriviti alla newsletter</h2>
-  <h3>Ricevi le recensioni direttamente via email!</h3>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <h2>Resta con paneacult</h2>
+  <p>Ricevi cinema che resta e sguardi contemporanei direttamente sulla tua mail preferita!</p>
 
   <iframe src="https://paneacult.substack.com/embed"
           width="100%"
           height="150"
           style="border:1px solid #eee; background:white;">
   </iframe>
-  </div>
-</div>
-<!-- SCRIPT -->
+</section>
+
+<footer>
+  © paneacult
+</footer>
+
 <script>
 const filtri = document.querySelectorAll('.filtro');
 const cards = document.querySelectorAll('.card');
@@ -208,6 +251,7 @@ filtri.forEach(filtro => {
         card.classList.add('nascosta');
       }
     });
+
   });
 });
 </script>
