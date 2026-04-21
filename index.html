@@ -13,7 +13,6 @@
   --text:#e6edf3;
 }
 
-/* BASE */
 body {
   margin:0;
   font-family:'Segoe UI', sans-serif;
@@ -21,31 +20,20 @@ body {
   color:var(--text);
 }
 
-/* HEADER */
 header {
-  padding:30px 20px;
   text-align:center;
+  padding:30px 20px;
   border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
-header h1 {
-  margin:0;
-  color:var(--gold);
-}
+header h1 { color:var(--gold); margin:0; }
 
-header p {
-  opacity:0.6;
-  margin-top:8px;
-}
-
-/* MAIN */
 main {
   max-width:1100px;
   margin:auto;
   padding:25px;
 }
 
-/* FILTRI */
 .filtri {
   display:flex;
   gap:10px;
@@ -67,7 +55,6 @@ main {
   color:black;
 }
 
-/* GRID */
 .grid {
   display:grid;
   gap:20px;
@@ -81,8 +68,7 @@ main {
   .grid { grid-template-columns:1fr 1fr 1fr; }
 }
 
-/* CARD */
-.link-card {
+.link-card, .link-card * {
   text-decoration:none;
   color:inherit;
 }
@@ -91,14 +77,13 @@ main {
   background:var(--card);
   border-radius:14px;
   overflow:hidden;
-  transition:0.25s;
+  transition:0.2s;
 }
 
 .recensione:hover {
   transform:translateY(-5px);
 }
 
-/* IMG */
 .cover {
   width:100%;
   height:230px;
@@ -106,10 +91,7 @@ main {
   filter:brightness(0.75);
 }
 
-/* CONTENUTO */
-.contenuto {
-  padding:20px;
-}
+.contenuto { padding:20px; }
 
 .rubrica {
   font-size:11px;
@@ -118,39 +100,14 @@ main {
   color:var(--gold);
 }
 
-.titolo {
-  margin:6px 0;
-  font-size:18px;
-}
+.titolo { margin:6px 0; }
 
-.meta {
-  font-size:13px;
-  opacity:0.5;
-}
+.meta { font-size:13px; opacity:0.5; }
 
-.stelle {
-  color:var(--gold);
-  margin:10px 0;
-}
+.stelle { color:var(--gold); margin:10px 0; }
 
-.mini {
-  font-size:14px;
-  opacity:0.8;
-}
+.mini { font-size:14px; opacity:0.8; }
 
-.leggi {
-  display:inline-block;
-  margin-top:10px;
-  color:var(--gold);
-}
-
-/* NO VIOLA */
-.link-card, .link-card * {
-  color:inherit;
-  text-decoration:none;
-}
-
-/* FOOTER */
 footer {
   text-align:center;
   padding:30px;
@@ -168,17 +125,14 @@ footer {
 
 <main>
 
-<!-- FILTRI -->
 <div class="filtri">
   <button onclick="filtra('tutti', this)" class="attivo">Tutti</button>
   <button onclick="filtra('resta', this)">Cinema che resta</button>
   <button onclick="filtra('contemporanei', this)">Sguardi contemporanei</button>
 </div>
 
-<!-- GRID -->
 <div class="grid">
 
-<!-- DITTATORE -->
 <a href="dittatore.html" class="link-card resta">
   <div class="recensione">
     <img class="cover" src="img/Grandedittatore2.jpg">
@@ -187,12 +141,11 @@ footer {
       <h2 class="titolo">#1 Il grande Dittatore</h2>
       <p class="meta">Charlie Chaplin (1940)</p>
       <div class="stelle">★★★★★</div>
-      <p class="mini">Satira potente che ridicolizza il nazismo.</p>
-      <span class="leggi">Leggi recensione →</span>
+      <p class="mini">Satira potente e ancora attuale.</p>
     </div>
   </div>
 </a>
-<!-- UNCUT -->
+
 <a href="uncut.html" class="link-card contemporanei">
   <div class="recensione">
     <img class="cover" src="img/uncut.jpg">
@@ -201,32 +154,28 @@ footer {
       <h2 class="titolo">#1 Uncut Gems</h2>
       <p class="meta">Safdie Brothers (2019)</p>
       <div class="stelle">★★★★☆</div>
-      <p class="mini">Un’esperienza ansiogena e magnetica.</p>
-      <span class="leggi">Leggi recensione →</span>
+      <p class="mini">Ansia pura e magnetica.</p>
     </div>
   </div>
 </a>
-  
-<!-- SUNSET -->
-<a href="sunset.html" class="link-card resta">
+
+<a href="tramonto.html" class="link-card resta">
   <div class="recensione">
-    <img class="cover" src="img/sunset.jpg">
+    <img class="cover" src="img/viale-del-tramonto.jpg">
     <div class="contenuto">
       <p class="rubrica">Cinema che resta</p>
-      <h2 class="titolo">#2 Viale del Tramonto</h2>
+      <h2 class="titolo">#2 Sunset Boulevard</h2>
       <p class="meta">Billy Wilder (1950)</p>
       <div class="stelle">★★★★★</div>
-      <p class="mini">Ritratto crudele e lucidissimo di Hollywood.</p>
-      <span class="leggi">Leggi recensione →</span>
+      <p class="mini">Quando Hollywood dimentica le sue stelle.</p>
     </div>
   </div>
 </a>
+
 </div>
 </main>
 
-<footer>
-  © 2026 paneacult
-</footer>
+<footer>© 2026 paneacult</footer>
 
 <script>
 function filtra(categoria, btn) {
@@ -237,11 +186,7 @@ function filtra(categoria, btn) {
   btn.classList.add('attivo');
 
   cards.forEach(card => {
-    if (categoria === 'tutti') {
-      card.style.display = '';
-    } else {
-      card.style.display = card.classList.contains(categoria) ? '' : 'none';
-    }
+    card.style.display = (categoria === 'tutti' || card.classList.contains(categoria)) ? '' : 'none';
   });
 }
 </script>
