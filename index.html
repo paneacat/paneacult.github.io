@@ -43,31 +43,27 @@
     }
 
     /* FILTRI */
-    .filtri {
-  display:flex;
-  justify-content:center;
-  gap:8px;
-  flex-wrap:nowrap; /* ❗ tutto su una riga */
-  margin:20px;
+   .filtri {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per riga */
+  gap: 8px;
+  margin: 20px;
 }
 
 .filtri button {
-  padding:6px 12px;       /* più piccoli */
-  font-size:13px;         /* testo più compatto */
-  border-radius:16px;
-  border:none;
-  background:#1f2a35;
-  color:white;
-  cursor:pointer;
-  transition:0.2s;
-  white-space:nowrap;     /* evita che il testo vada a capo */
+  padding: 6px 8px;        /* molto più piccoli */
+  font-size: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #1f2a35;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
 }
-    .filtri button:hover {
-      background:var(--gold);
-      color:black;
-    }
-    .filtri {
-  overflow-x:auto;
+
+.filtri button:hover {
+  background: var(--gold);
+  color: black;
 }
     .featured img {
       width:100%;
