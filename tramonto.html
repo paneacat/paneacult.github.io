@@ -25,14 +25,7 @@ h1,h2,.meta {
   font-family:'Segoe UI', sans-serif;
 }
 
-h1 { color:var(--gold); margin-bottom:5px; }
-
-h2 { margin-top:0; }
-
-.meta {
-  opacity:0.6;
-  margin-bottom:20px;
-}
+h1 { color:var(--gold); }
 
 .cover {
   width:100%;
@@ -43,25 +36,9 @@ h2 { margin-top:0; }
   filter:brightness(0.75);
 }
 
-p {
-  line-height:1.8;
-  margin-bottom:18px;
-  font-size:17px;
-}
+p { line-height:1.8; margin-bottom:18px; font-size:17px; }
 
-strong { font-weight:600; }
-
-em { opacity:0.8; }
-
-a {
-  color:var(--gold);
-  text-decoration:none;
-}
-
-.back {
-  display:inline-block;
-  margin-top:30px;
-}
+.stelle { color:var(--gold); }
 
 .nav-articoli {
   display:flex;
@@ -72,28 +49,17 @@ a {
 
 .nav-card {
   display:flex;
-  align-items:center;
   justify-content:center;
   padding:18px;
   border-radius:14px;
   background:#16202a;
-  border:1px solid rgba(255,255,255,0.08);
   color:white;
   text-decoration:none;
-  font-size:15px;
-}
-
-.nav-card:hover {
-  border-color:rgba(255,191,0,0.5);
 }
 
 .nav-card:last-child {
-  border:1px solid rgba(255,191,0,0.6);
   color:var(--gold);
-}
-
-.firma {
-  margin-top:30px;
+  border:1px solid rgba(255,191,0,0.6);
 }
 
 footer {
@@ -108,14 +74,15 @@ footer {
 
 <div class="article">
 
-<img class="cover" src="img/sunset.jpg">
+<img class="cover" src="img/viale-del-tramonto.jpg">
 
 <h1>Cinema che resta</h1>
 <h2>#2 Sunset Boulevard</h2>
 <p class="meta">Billy Wilder (1950)</p>
 
+<div class="stelle">★★★★★</div>
 <p>
-Secondo appuntamento della rubrica con Sunset Boulevard, uno dei ritratti più
+Secondo appuntamento della rubrica con Viale del Tramonto, uno dei ritratti più
 spietati e sinceri mai realizzati su Hollywood.
 </p>
 
@@ -145,24 +112,16 @@ incapace di accettare il tempo che passa, condannata a vivere nel riflesso della
 Un’opera lucida e spietata, che racconta non solo la fine di un’attrice,
 ma la fine di un’illusione.
 </p>
-
-<div class="firma">
-<strong>Patrizia Catania</strong><br>
-<em>paneacult</em>
-</div>
-
-<a href="index.html" class="back">← Torna alla home</a>
+<a href="index.html">← Torna alla home</a>
 
 <div class="nav-articoli">
   <a href="uncut.html" class="nav-card">← Uncut Gems</a>
-  <a href="#" class="nav-card disabled">Prossimo articolo →</a>
+  <a href="#" class="nav-card">Prossimo →</a>
 </div>
 
 </div>
 
-<footer>
-<p>&copy; 2026 paneacult</p>
-</footer>
+<footer>© 2026 paneacult</footer>
 
 </body>
 </html>
