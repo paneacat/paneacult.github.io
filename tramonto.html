@@ -1,95 +1,85 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sunset Boulevard</title>
+
+<title>TITOLO FILM</title>
 
 <style>
-:root { --gold:#ffbf00; }
 
+/* STILE ARTICOLO */
 body {
   margin:0;
-  font-family:'Georgia', serif;
-  background:#0f1720;
+  font-family:Georgia, serif;
+  background:#0b1620;
   color:#e6edf3;
 }
 
-.hero { height:260px; position:relative; }
-
 .hero img {
   width:100%;
-  height:100%;
+  height:300px;
   object-fit:cover;
-  filter:brightness(0.5);
-}
-
-.hero-content {
-  position:absolute;
-  bottom:20px;
-  left:20px;
-}
-
-.categoria {
-  color:var(--gold);
-  font-size:11px;
-  letter-spacing:2px;
-  text-transform:uppercase;
 }
 
 .container {
-  max-width:750px;
+  max-width:800px;
   margin:auto;
   padding:20px;
 }
 
-p {
-  line-height:1.8;
-  margin-bottom:18px;
+h1 {
+  color:#ffbf00;
 }
 
-.stelle {
-  color:var(--gold);
-  margin-bottom:20px;
+/* NAVIGAZIONE */
+.nav {
+  display:flex;
+  gap:10px;
+  margin-top:40px;
 }
 
-.btn {
-  display:block;
+.nav a {
+  flex:1;
   text-align:center;
-  margin-top:20px;
   padding:14px;
-  border:1px solid var(--gold);
+  border:1px solid #ffbf00;
   border-radius:10px;
-  color:var(--gold);
+  color:#ffbf00;
   text-decoration:none;
 }
+
+.nav a:hover {
+  background:#ffbf00;
+  color:black;
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- IMMAGINE -->
 <div class="hero">
-  <img src="img/viale-del-tramonto.jpg">
-  <div class="hero-content">
-    <div class="categoria">Cinema che resta</div>
-    <h1>Sunset Boulevard</h1>
-    <p>Billy Wilder (1950)</p>
-  </div>
+  <img src="./img/viale-del-tramonto.jpg">
 </div>
 
+<!-- CONTENUTO -->
 <div class="container">
 
-<div class="stelle">★★★★★</div>
+  <h1>Titolo Film</h1>
+  <p><i>Regista (anno)</i></p>
 
-<p>Secondo appuntamento della rubrica con Sunset Boulevard, uno dei ritratti più spietati e sinceri mai realizzati su Hollywood.</p>
+<p>Oggi parliamo di Eunset Boulrvard, uno dei ritratti più spietati e sinceri mai realizzati su Hollywood.</p>
 
-<p><strong>Joe Gillis</strong> (William Holden), uno sceneggiatore sull’orlo della bancarotta, si rifugia in una vecchia villa di Sunset Boulevard per sfuggire ai suoi creditori.</p>
+<p><strong>Joe Gillis</strong> (<em>William Holden</em>), uno sceneggiatore sull’orlo della bancarotta, si rifugia in una vecchia villa di Sunset Boulevard per sfuggire ai suoi creditori.</p>
 
-<p>La casa, immersa in un silenzio sospeso, appartiene in realtà a <strong>Norma Desmond</strong> (Gloria Swanson), ex diva del cinema muto che vive prigioniera del proprio passato, aggrappata all’illusione di un ritorno impossibile.</p>
+<p>La casa, immersa in un silenzio sospeso, appartiene in realtà a <strong>Norma Desmond</strong> (<em>Gloria Swanson</em>), ex diva del cinema muto che vive prigioniera del proprio passato, aggrappata all’illusione di un ritorno impossibile.</p>
 
 <p>Il loro incontro segna l’inizio di una relazione ambigua, fatta di dipendenza reciproca e illusioni condivise.</p>
 
-<p>Ma Viale del tramonto è molto più di una storia individuale: è il ritratto crudele di un’industria che crea miti e poi li abbandona, e di un cambiamento — l’avvento del sonoro — che ha lasciato indietro chi non ha saputo sopravvivere alla trasformazione.</p>
+<p>Ma Viale del tramonto è molto più di una storia individuale: è il ritratto crudele di un’industria che crea miti e poi li abbandona, e di un cambiamento, l’avvento del sonoro, che non ha solo rivoluzionato il cinema, ma ha lasciato indietro chi non ha saputo sopravvivere alla trasformazione.</p>
 
 <p>Billy Wilder costruisce un film che si apre come un noir e si trasforma progressivamente in una tragedia.</p>
 
@@ -99,7 +89,11 @@ p {
 
 <p><strong>Patrizia Catania</strong><br><em>paneacult</em></p>
 
-<a href="index.html" class="btn">← Torna alla home</a>
+  <!-- NAV -->
+  <div class="nav">
+    <a href="pagina-precedente.html">← Precedente</a>
+    <a href="pagina-successiva.html">Successivo →</a>
+  </div>
 
 </div>
 
