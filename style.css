@@ -150,3 +150,28 @@ footer {
     font-size: 22px;
   }
 }
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: var(--gold);
+}
+.card,
+.card h3,
+.card p {
+  color: white;
+}
+
+.social a {
+  color: white;
+}
+
+.social a:visited {
+  color: white;
+}
