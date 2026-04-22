@@ -424,3 +424,16 @@ footer {
   gap: 18px; /* 👈 spazio tra le icone */
   margin-top: 12px;
 }
+.banner-link h2 {
+  font-size: 32px;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.4;
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 400;
+}
+.banner-link h2 span {
+  display: block;
+  margin-top: 6px;
+}
