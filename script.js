@@ -1,39 +1,54 @@
 const filtri = document.querySelectorAll('.filtro');
 const cards = document.querySelectorAll('.card');
 
+let filtriAttivi = {
+  categoria: "tutti",
+  genere: "tutti",
+  regista: "tutti"
+};
+
 filtri.forEach(filtro => {
   filtro.addEventListener('click', () => {
 
-    filtri.forEach(f => f.classList.remove('attivo'));
+    const tipo = filtro.dataset.tipo;     // categoria / genere / regista
+    const valore = filtro.dataset.valore;
+
+    // aggiorna stato
+    filtriAttivi[tipo] = valore;
+
+    // UI attivo (solo nel gruppo giusto)
+    document.querySelectorAll(`.filtro[data-tipo="${tipo}"]`)
+      .forEach(f => f.classList.remove('attivo'));
+
     filtro.classList.add('attivo');
 
-    const categoria = filtro.dataset.filtro;
-
-    cards.forEach(card => {
-      const tag = card.dataset.tag;
-      card.style.display =
-        (categoria === "tutti" || tag === categoria)
-        ? "block"
-        : "none";
-    });
+    aggiornaFiltri();
   });
 });
 
-function toggleMenu() {
-  document.getElementById("menu").classList.toggle("active");
-  document.querySelector(".hamburger").classList.toggle("active");
-  document.getElementById("overlay").classList.toggle("active");
-}
+function aggiornaFiltri() {
+  cards.forEach(card => {
 
-});
+    const categoria = card.dataset.categoria;
+    const genere = card.dataset.genere;
+    const regista = card.dataset.regista;
 
+    const matchCategoria =
+      filtriAttivi.categoria === "tutti" ||
+      categoria === filtriAttivi.categoria;
 
-// ===== MENU HAMBURGER =====
-function toggleMenu() {
-  document.getElementById("menu").classList.toggle("active");
-  document.querySelector(".hamburger").classList.toggle("active");
-  document.getElementById("overlay").classList.toggle("active");
+    const matchGenere =
+      filtriAttivi.genere === "tutti" ||
+      genere === filtriAttivi.genere;
 
-  // blocca scroll quando menu aperto (bonus)
-  document.body.classList.toggle("no-scroll");
+    const matchRegista =
+      filtriAttivi.regista === "tutti" ||
+      regista.includes(filtriAttivi.regista);
+
+    if (matchCategoria && matchGenere && matchRegista) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
 }
