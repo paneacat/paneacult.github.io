@@ -369,3 +369,23 @@ footer {
   max-width: 600px;
   margin: 0 auto;
 }
+/* HEADER MOBILE FIX */
+@media (max-width: 600px) {
+
+  header {
+    padding: 20px 15px 10px;
+  }
+
+  .logo {
+    font-size: 34px;
+  }
+
+  .menu {
+    gap: 18px;
+  }
+
+  .menu a {
+    font-size: 11px;
+  }
+
+}
