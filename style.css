@@ -338,7 +338,37 @@ header {
 .contact-links a:hover {
   color: var(--gold);
 }
+.contact-intro {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+}
 
+.contact-intro span {
+  display: block;
+  margin-top: 6px;
+  opacity: 0.8;
+}
+.contact-links a {
+  display: inline-block;
+  margin-top: 25px;
+  font-size: 18px;
+  color: var(--gold);
+  border-bottom: 1px solid rgba(255,191,0,0.4);
+  padding-bottom: 4px;
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  border-bottom: 1px solid var(--gold);
+}
+.contact-divider {
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin: 25px auto;
+  opacity: 0.6;
+}
 /* email */
 .email {
   margin-top: 25px;
@@ -349,7 +379,17 @@ header {
   margin-top: 20px;
   color: #bfbfbf;
 }
+.contact-email {
+  margin-top: 35px;
+  font-size: 14px;
+  color: #aaa;
+}
 
+.contact-email strong {
+  display: block;
+  margin-top: 5px;
+  color: var(--text);
+}
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
