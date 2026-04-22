@@ -82,24 +82,6 @@ header {
   margin: 0 auto;
   padding: 0 20px;
 }
-
-/* ===== HERO (UNIFICATO) ===== */
-.hero {
-  text-align: center;
-  padding: 40px 20px 20px;
-}
-
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 26px;
-  line-height: 1.4;
-  font-weight: 400;
-  max-width: 420px;
-  margin: 20px auto 30px;
-  letter-spacing: 0.3px;
-  text-align: center;
-}
-
 /* ===== GRID ===== */
 .grid {
   display: grid;
@@ -396,27 +378,22 @@ footer {
 .contact-email {
   text-align: center;
 }
-
-.hero {
-  text-align: center !important;
-}
-
-.hero h1 {
-  text-align: center;
-  font-weight: 400;
-  margin: 0 auto 30px;
-  max-width: 420px;
-  font-size: 22px;
-  line-height: 1.4;
-}
-}
 .social {
   display: flex;
   justify-content: center;
   gap: 16px;
   margin-top: 15px;
 }
-.hero,
-  .hero * {
-    text-align: center;
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 5vw, 28px);
+  line-height: 1.5;
+  font-weight: 400; /* niente grassetto */
+  letter-spacing: 0.3px;
+
+  max-width: 480px;
+  margin: 30px auto; /* centrato vero */
+
+  text-align: center;
 }
