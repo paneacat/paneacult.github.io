@@ -487,3 +487,8 @@ footer {
   font-size: 26px;
   letter-spacing: 0.5px;
 }
+
+.home .grid,
+.archivio .grid {
+  grid-template-columns: 1fr;
+}
