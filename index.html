@@ -179,8 +179,8 @@ header {
 /* ===== BANNER ===== */
 
 .banner-link {
-  max-width: 900px;
-  margin: 30px auto;
+  max-width: 700px;
+  margin: 40px auto;
   padding: 0 20px;
   text-align: center;
 }
@@ -264,7 +264,17 @@ header {
   color: var(--gold);
   font-size: 14px;
 }
+.newsletter {
+  padding: 0 20px;
+}
 
+.newsletter iframe {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 8px;
+}
 /* ===== FOOTER ===== */
 
 footer {
@@ -279,16 +289,15 @@ footer {
 @media (max-width: 600px) {
 
   .banner-link {
-    padding: 0 25px;
-    max-width: 320px;
-    margin: 40px auto;
-  }
+  max-width: 100%;
+  padding: 0 25px;
+}
 
-  .banner-link h2 {
-    font-size: 22px;
-    line-height: 1.5;
-    max-width: 280px;
-  }
+.banner-link h2 {
+  max-width: 320px;
+  font-size: 22px;
+  line-height: 1.5;
+}
 
   .filtri {
     display: flex;
