@@ -274,7 +274,6 @@ header {
   margin: 120px auto;
   padding: 0 20px;
 }
-
 /* ===== NEWSLETTER ===== */
 .newsletter {
   text-align: center;
@@ -400,7 +399,10 @@ footer {
 }
 
 .contact-cta {
-  text-align: center;
+  color: var(--gold);
+  font-size: 18px;
+  margin-top: 10px;
+  text-allign: center;
 }
 
 .contact-email {
