@@ -389,3 +389,43 @@ footer {
   }
 
 }
+
+/* SPAZI MOBILE */
+@media (max-width: 600px) {
+
+  .container {
+    padding: 0 18px;
+  }
+
+  .contact-container,
+  .about-container {
+    margin: 60px auto;
+  }
+
+  .banner-link {
+    margin: 30px auto;
+  }
+
+}
+/* NEWSLETTER MOBILE FIX */
+@media (max-width: 600px) {
+
+  .newsletter iframe {
+    max-width: 100%;
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+
+}
+/* TITOLI MOBILE */
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .banner-link h2 {
+    font-size: 24px;
+  }
+
+}
