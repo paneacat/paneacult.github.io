@@ -327,13 +327,6 @@ footer {
     max-width: 90%;
   }
 
-  .social {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 10px;
-  }
-
   .home .grid,
   .archivio .grid {
     grid-template-columns: 1fr;
@@ -407,4 +400,10 @@ footer {
 
 .contact-email {
   text-align: center;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 15px;
 }
