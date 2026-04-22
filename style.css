@@ -322,11 +322,6 @@ footer {
     font-size: 11px;
   }
 
-  .hero h1 {
-    font-size: 22px;
-    max-width: 90%;
-  }
-
   .home .grid,
   .archivio .grid {
     grid-template-columns: 1fr;
@@ -409,8 +404,11 @@ footer {
 .hero h1 {
   text-align: center !important;
   font-weight: 400 !important;
-  margin: 0 auto 40px !important;
-  max-width: 500px !important;
+  margin: 0 auto 30px !important;
+  max-width: 420plx !important;
+  font-size: 22px;
+  line-height: 1.4;
+}
 }
 .social {
   display: flex !important;
