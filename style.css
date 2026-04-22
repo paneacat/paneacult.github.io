@@ -258,42 +258,33 @@ footer {
   margin: 0 auto;
 }
 
-/* TITOLO */
 .newsletter h2 {
   color: var(--gold);
   font-size: 20px;
   margin-bottom: 8px;
-  letter-spacing: 0.3px;
 }
 
-/* SOTTOTITOLO */
 .newsletter p {
   font-size: 14px;
   color: #aaa;
   margin-bottom: 25px;
 }
 
-/* BOX (qui succede la magia) */
-.newsletter-box {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-  padding: 10px;
-  backdrop-filter: blur(6px);
+/* 🔥 bottone elegante */
+.newsletter-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 24px;
+  background: var(--gold);
+  color: #0b1f26;
+  font-size: 14px;
+  transition: 0.3s ease;
 }
 
-/* IFRAME */
-.newsletter iframe {
-  width: 100%;
-  border-radius: 12px;
-  display: block;
+.newsletter-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
-
-/* SHADOW LEGGERA */
-.newsletter-box {
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
 .about-container {
   max-width: 520px;
   margin: 100px auto;
