@@ -460,5 +460,9 @@ footer {
     transform: scale(0.95);
     transform-origin: top center;
   }
-
+}
+.newsletter-title {
+  color: var(--gold);
+  font-size: 26px;
+  letter-spacing: 0.5px;
 }
