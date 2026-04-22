@@ -454,6 +454,60 @@ header {
     display: flex;
   }
 }
+    /* OVERLAY SCURO */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 5;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* MENU MOBILE ANIMATO */
+@media (max-width: 700px) {
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 75%;
+    background: #0b1620;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 30px;
+    gap: 25px;
+
+    transform: translateX(100%);
+    transition: 0.4s ease;
+    z-index: 10;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .menu a {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+}
+    .no-scroll {
+  overflow: hidden;
+    }
+    .menu a.active {
+  color: #ffbf00;
+    }
 </style>
 </head>
 <header>
@@ -466,11 +520,13 @@ header {
   </div>
 
   <!-- MENU -->
-  <nav class="menu" id="menu">
-    <a href="index.html">Chi sono</a>
-    <a href="#">Contatti</a>
-    <a href="#">Archivio</a>
+  <nav class="menu" id="menu">  
+<a href="index.html" class="active">Chi sono</a>
+<a href="index.html" class="active">Contatti</a>
+<a href="index.html" class="active">Archivio</a>
+
   </nav>
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 </header>
 <body>
 
@@ -584,8 +640,16 @@ filtri.forEach(filtro => {
 </script>
 <script>
 function toggleMenu() {
-  document.getElementById("menu").classList.toggle("active");
-  document.querySelector(".hamburger").classList.toggle("active");
+  const menu = document.getElementById("menu");
+  const burger = document.querySelector(".hamburger");
+  const overlay = document.getElementById("overlay");
+
+  menu.classList.toggle("active");
+  burger.classList.toggle("active");
+  overlay.classList.toggle("active");
+
+  // blocca scroll
+  document.body.classList.toggle("no-scroll");
 }
 </script>
 </body>
