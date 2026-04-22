@@ -89,7 +89,6 @@ header {
 
 /* ===== MOBILE MENU ===== */
 
-@media (max-width: 600px) {
 
   .banner-link {
     padding: 0 25px;
@@ -308,7 +307,6 @@ footer {
 
 /* ===== MOBILE FIX ===== */
 
-@media (max-width: 600px) {
 
   .banner-link {
   max-width: 100%;
@@ -341,8 +339,6 @@ footer {
 .hidden {
   display: none;
 }
-@media (max-width: 600px) {
-
   .section {
     padding: 0 16px;
     margin: 40px auto;
@@ -359,6 +355,66 @@ footer {
   iframe {
     width: 100%;
     max-width: 100%;
+    border-radius: 12px;
+  }
+@media (max-width: 600px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .banner-link {
+    padding: 0 16px;
+    margin: 40px auto;
+  }
+
+  .banner-link h2 {
+    font-size: 22px;
+    line-height: 1.4;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .filtri {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .filtro {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .section {
+    padding: 0 16px;
+    margin: 40px auto;
+    max-width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .newsletter {
+    padding: 0 16px;
+  }
+
+  .newsletter iframe {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
     border-radius: 12px;
   }
 
