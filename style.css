@@ -329,6 +329,20 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+.hero {
+  text-align: center;
+  padding: 40px 20px 20px; /* meno spazio sopra */
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px; /* molto più piccolo */
+  line-height: 1.4;
+  max-width: 420px; /* più stretto = più elegante */
+  margin: 20px auto 30px;
+  opacity: 0.9;
+  letter-spacing: 0.3px;
+}
 
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
