@@ -93,6 +93,7 @@ header {
   font-family: 'Playfair Display', serif;
   font-size: 26px;
   line-height: 1.4;
+  font-weight: 400;
   max-width: 420px;
   margin: 20px auto 30px;
   letter-spacing: 0.3px;
@@ -401,22 +402,19 @@ footer {
 }
 
 .hero h1 {
-  text-align: center !important;
-  font-weight: 400 !important;
-  margin: 0 auto 30px !important;
-  max-width: 420plx !important;
+  text-align: center;
+  font-weight: 400;
+  margin: 0 auto 30px;
+  max-width: 420px;
   font-size: 22px;
   line-height: 1.4;
 }
 }
 .social {
-  display: flex !important;
-  justify-content: center !important;
-  gap: 16px;
-  margin-top: 15px;
+  display: flex;
+  justify-content: center;
 }
 .hero,
   .hero * {
     text-align: center !important;
-}
 }
