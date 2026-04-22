@@ -263,3 +263,16 @@ footer {
   }
 
 }
+@media (max-width: 600px) {
+
+  .newsletter h2 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .newsletter p {
+    font-size: 13px;
+    opacity: 0.8;
+  }
+
+}
