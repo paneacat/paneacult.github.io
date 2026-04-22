@@ -370,7 +370,6 @@ footer {
   margin: 0 auto;
 }
 /* HEADER MOBILE FIX */
-@media (max-width: 600px) {
 
   header {
     padding: 20px 15px 10px;
@@ -390,9 +389,6 @@ footer {
 
 }
 
-/* SPAZI MOBILE */
-@media (max-width: 600px) {
-
   .container {
     padding: 0 18px;
   }
@@ -407,8 +403,6 @@ footer {
   }
 
 }
-/* NEWSLETTER MOBILE FIX */
-@media (max-width: 600px) {
 
   .newsletter iframe {
     max-width: 100%;
@@ -417,8 +411,6 @@ footer {
   }
 
 }
-/* TITOLI MOBILE */
-@media (max-width: 600px) {
 
   h1 {
     font-size: 30px;
@@ -427,5 +419,32 @@ footer {
   .banner-link h2 {
     font-size: 24px;
   }
+}
+/* HERO MOBILE WOW */
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
 
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  line-height: 1.3;
+  color: var(--text);
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+  .home .grid {
+    gap: 50px;
+  }
+
+  .home .card img {
+    height: 260px;
+    border-radius: 18px;
+  }
+
+  .card-info h3 {
+    font-size: 24px;
+  }
 }
