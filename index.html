@@ -207,6 +207,19 @@ header {
   border-color: var(--gold);
 }
 
+  @media (max-width: 600px) {
+  .filtri {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .filtro {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  }
 /* ===== GRID ===== */
 
 .section {
@@ -243,7 +256,13 @@ header {
 .card:hover img {
   transform: scale(1.03);
 }
-
+  
+@media (max-width: 600px) {
+  .card img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
 /* ===== NEWSLETTER ===== */
 
 .newsletter {
@@ -265,6 +284,13 @@ footer {
   opacity: 0.5;
 }
 
+@media (max-width: 600px) {
+  .banner-link h2 {
+    font-size: 22px;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+}
 </style>
 </head>
 
