@@ -10,9 +10,10 @@
   --bg: #0b1f26;
   --gold: #ffbf00;
   --text: #eaeaea;
+  --muted: #aaa;
 }
 
-/* ===== BODY ===== */
+/* ===== BASE ===== */
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
@@ -21,8 +22,8 @@ body {
 
 /* ===== LINK ===== */
 a {
-  color: var(--text);
   text-decoration: none;
+  color: var(--text);
 }
 
 a:hover {
@@ -32,12 +33,12 @@ a:hover {
 /* ===== HEADER ===== */
 header {
   text-align: center;
-  padding: 50px 0 30px;
+  padding: 40px 20px 20px;
 }
 
 .logo {
   font-family: 'Playfair Display', serif;
-  font-size: 56px;
+  font-size: 48px;
   color: var(--gold);
 }
 
@@ -50,30 +51,24 @@ header {
 }
 
 .menu a {
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 1px;
-  color: #aaa;
+  color: var(--muted);
   text-transform: uppercase;
-}
-
-.menu a:hover {
-  color: var(--gold);
 }
 
 .menu a.active {
   color: var(--gold);
-  position: relative;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 2px;
 }
 
-.menu a.active::after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background: var(--gold);
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  opacity: 0.6;
+/* ===== SOCIAL ===== */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 15px 0;
 }
 
 /* ===== CONTAINER ===== */
@@ -82,79 +77,23 @@ header {
   margin: 0 auto;
   padding: 0 20px;
 }
-/* ===== GRID ===== */
-.grid {
-  display: grid;
-  gap: 60px;
-  margin-top: 40px;
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 20px 0 30px;
 }
 
-/* ===== HOME ===== */
-.home .container {
-  max-width: 1100px;
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 5vw, 28px);
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
-.home .grid {
-  gap: 80px;
-}
-
-.home .card img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-/* ===== ARCHIVIO ===== */
-.archivio .container {
-  max-width: 1200px;
-}
-
-.archivio .grid {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-}
-
-.archivio .card img {
-  height: 260px;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-/* ===== CARD ===== */
-.card {
-  display: block;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-.card img {
-  transition: transform 0.6s ease;
-}
-
-.card:hover img {
-  transform: scale(1.03);
-}
-
-.card-info {
-  margin-top: 12px;
-}
-
-.card-info h3:hover {
-  color: var(--text);
-}
-
-.card-info p {
-  color: #aaa;
-  font-size: 15px;
-}
-
-/* ===== FILTRI (FIX BRACE) ===== */
-.filtri {
+/* ===== FILTRI ===== */
 .filtri {
   max-width: 700px;
   margin: 30px auto;
@@ -167,7 +106,7 @@ header {
 
 .filtri-group h4 {
   font-size: 13px;
-  color: #aaa;
+  color: var(--muted);
   margin-bottom: 10px;
 }
 
@@ -183,108 +122,89 @@ header {
   border-radius: 20px;
   border: 1px solid #444;
   background: transparent;
-  color: #ccc;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.filtro:hover {
-  border-color: var(--gold);
-  color: var(--gold);
+  color: var(--muted);
 }
 
 .filtro.attivo {
   background: var(--gold);
-  color: #0b1f26;
+  color: var(--bg);
   border-color: var(--gold);
 }
 
-/* ===== REVIEW ===== */
-.review-container {
-  max-width: 700px;
-  margin: 50px auto;
-  padding: 0 20px;
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  gap: 40px;
+  margin-top: 30px;
 }
 
-.review-text {
-  line-height: 1.9;
-  color: #d6d6d6;
+/* ===== CARD ===== */
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
-.review-text p {
-  margin-bottom: 20px;
+.card-info {
+  margin-top: 10px;
 }
 
-/* ===== WATCH ===== */
-.watch {
-  margin: 20px 0 30px;
+.card-info h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text);
 }
 
-.watch-links {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+.card-info p {
+  font-size: 14px;
+  color: var(--muted);
 }
 
-.watch-links a {
-  border: 1px solid var(--gold);
-  padding: 6px 12px;
-  border-radius: 20px;
-  color: var(--gold);
-  font-size: 13px;
+/* ===== ARCHIVIO ===== */
+.archivio .grid {
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.watch-links a:hover {
-  background: var(--gold);
-  color: var(--bg);
-}
-
-/* ===== ABOUT ===== */
-.about-container {
-  max-width: 700px;
-  margin: 120px auto;
-  padding: 0 20px;
-  line-height: 1.9;
-  text-align: center;
-}
-
-.about-container p {
-  margin-bottom: 20px;
-  color: #ccc;
+.archivio .card img {
+  height: 260px;
 }
 
 /* ===== CONTACT ===== */
 .contact-container {
   text-align: center;
-  max-width: 600px;
+  max-width: 500px;
   margin: 120px auto;
   padding: 0 20px;
-}
-/* ===== NEWSLETTER ===== */
-.newsletter {
-  text-align: center;
-  margin: 120px auto 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.newsletter iframe {
-  width: 100%;
-  max-width: 480px;
-  margin: 30px auto;
-  display: block;
-  border-radius: 14px;
-  filter: invert(1) hue-rotate(180deg);
-}
-
-.newsletter-title {
-  color: var(--gold);
+.contact-intro {
   font-size: 26px;
+}
+
+.contact-sub {
+  color: var(--muted);
+}
+
+.contact-cta {
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.contact-email {
+  color: var(--muted);
 }
 
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
-  margin-top: 80px;
-  padding: 30px;
+  margin-top: 60px;
+  padding: 20px;
   font-size: 12px;
   opacity: 0.5;
 }
@@ -307,106 +227,12 @@ footer {
   .menu a {
     font-size: 11px;
   }
-  .home .grid,
-  .archivio .grid {
+
+  .grid {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
-  .filtri > div {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 25px;
-}
 
-.filtri-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-  .home .card img {
+  .card img {
     height: 240px;
   }
-
-  .card-info h3 {
-    font-size: 22px;
-  }
-
-  .about-container {
-    margin: 80px auto;
-  }
-
-  .newsletter {
-    margin: 80px auto;
-  }
-
-  .newsletter h2 {
-    font-size: 20px;
-  }
-
-  .newsletter iframe {
-    transform: scale(0.95);
-    transform-origin: top center;
-  }
 }
-.contact-container {
-  text-align: center;
-  max-width: 500px;
-  margin: 120px auto;
-  padding: 0 20px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-.contact-intro {
-  font-size: 26px;
-  text-align: center;
-}
-
-.contact-sub {
-  text-align: center;
-}
-
-.contact-cta {
-  color: var(--gold);
-  font-size: 18px;
-  margin-top: 10px;
-  text-allign: center;
-}
-
-.contact-email {
-  text-align: center;
-}
-.social {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 15px;
-}
-
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(22px, 5vw, 28px);
-  line-height: 1.5;
-  font-weight: 400; /* niente grassetto */
-  letter-spacing: 0.3px;
-  max-width: 480px;
-  margin: 30px auto; /* centrato vero */
-  text-align: center;
-}
-.hero {
-  text-align: center;
-}
-.archivio .card-info h3 {
-  font-size: 20px;
-  color: var(--text);
-  font-weight: 400;
-}
-  .archivio .card {
-  margin-bottom: 10px;
-  }
-  
