@@ -1,3 +1,4 @@
+// ===== FILTRI =====
 const filtri = document.querySelectorAll('.filtro');
 const cards = document.querySelectorAll('.card');
 
@@ -12,14 +13,18 @@ filtri.forEach(filtro => {
     const tipo = filtro.dataset.tipo;
     const valore = filtro.dataset.valore;
 
-    // aggiorna stato
-    filtriAttivi[tipo] = valore;
+    // TOGGLE: se clicchi quello già attivo → reset a "tutti"
+    if (filtro.classList.contains('attivo')) {
+      filtro.classList.remove('attivo');
+      filtriAttivi[tipo] = "tutti";
+    } else {
+      // reset solo del gruppo (categoria o genere)
+      document.querySelectorAll(`.filtro[data-tipo="${tipo}"]`)
+        .forEach(f => f.classList.remove('attivo'));
 
-    // UI attivo (solo nel gruppo corretto)
-    document.querySelectorAll(`.filtro[data-tipo="${tipo}"]`)
-      .forEach(f => f.classList.remove('attivo'));
-
-    filtro.classList.add('attivo');
+      filtro.classList.add('attivo');
+      filtriAttivi[tipo] = valore;
+    }
 
     aggiornaFiltri();
   });
@@ -37,15 +42,16 @@ function aggiornaFiltri() {
 
     const matchGenere =
       filtriAttivi.genere === "tutti" ||
-      genere.includes(filtriAttivi.genere);
+      (genere && genere.includes(filtriAttivi.genere));
 
     if (matchCategoria && matchGenere) {
-      card.style.display = "";
+      card.style.display = "block";
     } else {
-      card.style.display = "";
+      card.style.display = "none";
     }
   });
 }
+// ===== FADE IN =====
 const elements = document.querySelectorAll('.fade-in');
 
 function revealOnScroll() {
@@ -57,42 +63,10 @@ function revealOnScroll() {
     if (top < trigger) {
       setTimeout(() => {
         el.classList.add('visible');
-      }, index * 80); // 👈 ritmo tra le card
+      }, index * 80);
     }
   });
 }
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
-function revealOnScroll() {
-  const trigger = window.innerHeight * 0.9;
-
-  elements.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-
-    if (top < trigger) {
-      el.classList.add('visible');
-    }
-  });
-}
-
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
-const filtri = document.querySelectorAll(".filtro");
-
-filtri.forEach(btn => {
-  btn.addEventListener("click", () => {
-
-    // se è già attivo → togli
-    if (btn.classList.contains("attivo")) {
-      btn.classList.remove("attivo");
-      return;
-    }
-
-    // altrimenti: resetta tutti
-    filtri.forEach(b => b.classList.remove("attivo"));
-
-    // attiva solo quello cliccato
-    btn.classList.add("attivo");
-  });
-});
