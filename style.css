@@ -339,13 +339,6 @@ footer {
   color: rgba(255,255,255,0.7);
 }
 
-.filtri-group h4 {
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  color: rgba(255,255,255,0.4);
-  margin-bottom: 0px;
-}
-
 /* 3) IMMAGINI PAGINA RECENSIONI (tutte identiche davvero) */
 .review-hero img {
   position: absolute;
