@@ -300,12 +300,6 @@ footer {
 .about-container p:not(:first-of-type) {
   color: #d6d6d6;
 }
-/* frase principale */
-.about-container p:first-child {
-  color: var(--gold);
-  letter-spacing: 0.3px;
-  margin-bottom: 14px;
-}
 
 /* nome */
 .about-container p:nth-of-type(3) {
