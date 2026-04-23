@@ -417,3 +417,8 @@ margin-bottom: 4px;
 .home-grid {
   grid-template-columns: 1fr !important;
 }
+.card-info,
+.card h3,
+.card p {
+  position: static !important;
+}
