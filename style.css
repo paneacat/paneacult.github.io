@@ -470,25 +470,6 @@ footer {
   margin: 15px 0 25px;
   font-size: 13px;
   color: var(--muted);
-}
-
-.watch span {
-  margin-right: 6px;
-  color: #888;
-}
-
-.watch a {
-  margin-right: 10px;
-  color: var(--text);
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  transition: 0.2s;
-}
-
-.watch a:hover {
-  color: var(--gold);
-  border-color: var(--gold);
-}
-.watch {
   margin: 10px 0 25px;
   font-size: 13px;
 }
@@ -499,25 +480,49 @@ footer {
 }
 
 .watch a {
+  margin-right: 10px;
+  transition: 0.2s;
   color: var(--gold);
-  border-bottom: 1px solid rgba(255,191,0,0.4);
+  border-bottom: 1px solid rgba(255,191,0,0.4);  
 }
 
 .watch a:hover {
   border-color: var(--gold);
 }
-.back-home a {
+.review-end {
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* ⭐ STELLE */
+.stelle {
+  color: var(--gold);
   font-size: 14px;
-  color: #aaa;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+/* ✍️ FIRMA */
+.firma {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.firma em {
+  font-style: normal;
+  color: #888;
+  font-size: 12px;
+}
+
+/* 🔙 LINK */
+.back-home a {
+  font-size: 13px;
+  color: #888;
   transition: 0.2s;
 }
 
 .back-home a:hover {
   color: var(--gold);
-}
-.back-home {
-  margin-top: 40px
-}
-.stelle {
-  margin-bottom: 15px !important;
 }
