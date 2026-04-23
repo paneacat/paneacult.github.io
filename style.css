@@ -481,3 +481,19 @@ footer {
   }
 
 }
+.rating {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+
+  padding: 6px 10px;
+  border-radius: 999px;
+
+  color: var(--gold);
+}
