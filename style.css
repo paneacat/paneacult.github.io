@@ -523,3 +523,14 @@ footer {
 .back-home a:hover {
   color: var(--gold);
 }
+.archivio-grid h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--gold);
+  margin-top: 10px;
+}
+
+.archivio-grid p {
+  font-size: 14px;
+  color: #aaa;
+}
