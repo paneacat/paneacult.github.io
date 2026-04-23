@@ -34,7 +34,7 @@ a:hover {
 /* ===== HEADER ===== */
 .site-header {
   text-align: center;
-  padding: 30px 20px 10px;;
+  padding: 20px 15px 10px;
 }
 
 .logo {
@@ -97,15 +97,24 @@ a:hover {
 }
 
 /* BOTTONI */
+.filtri-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .filtro {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   font-size: 11px;
   padding: 5px 10px;
   letter-spacing: 0.3px;
-  width: auto;              /* 🔥 fondamentale */
-  flex: 0 0 auto;          /* 🔥 blocca lo stretching */   
+
+  width: auto;
+  flex: 0 0 auto;
+
   border-radius: 999px;
   background: transparent;
   border: 1px solid rgba(255,255,255,0.15);
@@ -114,12 +123,6 @@ a:hover {
   transition: all 0.25s ease;
 }
 
-/* ATTIVO */
-.filtro.attivo {
-  background: var(--gold);
-  color: #0b1f26;
-  border-color: var(--gold);
-}
 /* ===== GRID ===== */
 .grid {
   display: grid;
@@ -196,7 +199,6 @@ footer {
 }
 
 /* ===== MOBILE ===== */
-/* ===== MOBILE ===== */
 @media (max-width: 600px) {
 
   /* HEADER */
@@ -238,28 +240,10 @@ footer {
   }
 
   /* FILTRI */
-  .filtri-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  flex-direction: row; /* 🔥 fondamentale */
-}
-
 .filtro {
-  width: auto !important;
-  flex: 0 0 auto;
-  padding: 5px 10px;
-  font-size: 11px;
+  font-size: 10px;
+  padding: 4px 9px;
 }
-  /* HERO */
-  .hero {
-    padding: 10px 0 20px;
-  }
-
-  .hero h1 {
-    font-size: 22px;
-    line-height: 1.4;
-  }
 
   /* NEWSLETTER */
   .newsletter {
