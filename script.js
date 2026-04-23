@@ -1,3 +1,4 @@
+
 // ===== FILTRI =====
 const filtri = document.querySelectorAll('.filtro');
 const cards = document.querySelectorAll('.card');
@@ -7,11 +8,51 @@ let filtriAttivi = {
   genere: "tutti"
 };
 
-filtri.forEach(filtro => {
-  filtro.addEventListener('click', () => {
+filtri.forEach(btn => {
+  btn.addEventListener("click", () => {
 
-    const tipo = filtro.dataset.tipo;
-    const valore = filtro.dataset.valore;
+    const tipo = btn.dataset.tipo;
+    const valore = btn.dataset.valore;
+
+    // reset gruppo (categoria o genere)
+    document
+      .querySelectorAll(`.filtro[data-tipo="${tipo}"]`)
+      .forEach(b => b.classList.remove("attivo"));
+
+    // se clicchi "tutti"
+    if (valore === "tutti") {
+      filtriAttivi[tipo] = "tutti";
+      btn.classList.add("attivo");
+    } else {
+      filtriAttivi[tipo] = valore;
+      btn.classList.add("attivo");
+    }
+
+    aggiornaFiltri();
+  });
+});
+
+function aggiornaFiltri() {
+  cards.forEach(card => {
+
+    const categoria = card.dataset.categoria;
+    const genere = card.dataset.genere || "";
+
+    const matchCategoria =
+      filtriAttivi.categoria === "tutti" ||
+      categoria === filtriAttivi.categoria;
+
+    const matchGenere =
+      filtriAttivi.genere === "tutti" ||
+      genere.includes(filtriAttivi.genere);
+
+    if (matchCategoria && matchGenere) {
+      card.style.display = "";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
 
     // TOGGLE: se clicchi quello già attivo → reset a "tutti"
 if (matchCategoria && matchGenere) {
