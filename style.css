@@ -114,8 +114,9 @@ a:hover {
 .filtri-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;              /* 🔥 più stretti */
-  justify-content: flex-start; /* 🔥 allineati a sinistra */
+  gap: 8px;
+  justify-content: center; /* ✅ centrati */
+  max-width: 600px;
 }
 
 .filtro {
@@ -142,8 +143,8 @@ a:hover {
 .filtri {
    display: flex;
   flex-direction: column;
-  align-items: flex-start; /* 🔥 non centrati */
-  gap: 14px;               /* 🔥 meno spazio tra le due righe */
+  align-items: center; /* ✅ torna centrato */
+  gap: 14px;
   margin: 30px 0 30px;
 }
 /* ===== CARD ===== */
