@@ -1,68 +1,50 @@
-// ===== FILTRI =====
-const filtri = document.querySelectorAll('.filtro');
-const cards = document.querySelectorAll('.card');
+document.addEventListener("DOMContentLoaded", () => {
 
-let filtriAttivi = {
-  categoria: "tutti",
-  genere: "tutti"
-};
+  const filtri = document.querySelectorAll('.filtro');
+  const cards = document.querySelectorAll('.card');
 
-filtri.forEach(filtro => {
-  filtro.addEventListener('click', () => {
+  console.log("Filtri:", filtri.length);
+  console.log("Cards:", cards.length);
 
-    const tipo = filtro.dataset.tipo;
-    const valore = filtro.dataset.valore;
+  let filtriAttivi = {
+    categoria: "tutti",
+    genere: "tutti"
+  };
 
-    // reset gruppo (categoria o genere)
-    document.querySelectorAll(`.filtro[data-tipo="${tipo}"]`)
-      .forEach(f => f.classList.remove('attivo'));
+  filtri.forEach(filtro => {
+    filtro.addEventListener('click', () => {
 
-    // attiva quello cliccato
-    filtro.classList.add('attivo');
+      const tipo = filtro.dataset.tipo;
+      const valore = filtro.dataset.valore;
 
-    // salva stato
-    filtriAttivi[tipo] = valore;
+      document.querySelectorAll(`.filtro[data-tipo="${tipo}"]`)
+        .forEach(f => f.classList.remove('attivo'));
 
-    aggiornaFiltri();
+      filtro.classList.add('attivo');
+      filtriAttivi[tipo] = valore;
+
+      aggiornaFiltri();
+    });
   });
+
+  function aggiornaFiltri() {
+    cards.forEach(card => {
+
+      const categoria = card.dataset.categoria;
+      const genere = card.dataset.genere || "";
+
+      const matchCategoria =
+        filtriAttivi.categoria === "tutti" ||
+        categoria === filtriAttivi.categoria;
+
+      const matchGenere =
+        filtriAttivi.genere === "tutti" ||
+        genere.includes(filtriAttivi.genere);
+
+      card.style.display = (matchCategoria && matchGenere)
+        ? "block"
+        : "none";
+    });
+  }
+
 });
-
-function aggiornaFiltri() {
-  cards.forEach(card => {
-
-    const categoria = card.dataset.categoria;
-    const genere = card.dataset.genere || "";
-
-    const matchCategoria =
-      filtriAttivi.categoria === "tutti" ||
-      categoria === filtriAttivi.categoria;
-
-    const matchGenere =
-      filtriAttivi.genere === "tutti" ||
-      genere.includes(filtriAttivi.genere);
-
-    if (matchCategoria && matchGenere) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
-}
-
-// ===== DEBUG (temporaneo) =====
-console.log("Filtri trovati:", filtri.length);
-console.log("Card trovate:", cards.length);
-const elements = document.querySelectorAll('.fade-in');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target); // 👈 importante (no bug)
-    }
-  });
-}, {
-  threshold: 0.1
-});
-
-elements.forEach(el => observer.observe(el));
