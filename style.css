@@ -174,7 +174,12 @@ a:hover {
 }
 
 .card:hover p {
-  color: #ccc !important;
+  color: #ccc;
+}
+
+/* 🔥 titolo NON cambia mai */
+.card-info h3 {
+  transition: 0.2s ease;
 }
 
 /* ===== CARD TEXT ===== */
@@ -193,6 +198,10 @@ a:hover {
   font-size: 13px;
   color: #aaa;
   line-height: 1.2;
+}
+.card:hover .card-info h3 {
+  opacity: 0.85;
+  transform: translateY(-1px);
 }
 .contact-container,
 .about-container {
