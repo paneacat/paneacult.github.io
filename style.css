@@ -337,10 +337,8 @@ footer {
 }
 /* 4) HOME – testo leggermente più basso e centrato meglio */
 .card-info {
-  padding-left: 6px;
   margin-top: 10px;
-  position: relative;
-  z-index: 2;
+  padding-left: 0;
 }
 
 .card-info h3 {
