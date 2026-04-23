@@ -99,7 +99,6 @@ a:hover {
   display: grid;
   gap: 40px;
   margin-top: 20px;
-  grid-template-columns: repeat(3, 1fr);
 }
 
 .filtri-buttons {
@@ -141,11 +140,10 @@ a:hover {
 
 .card img {
   width: 100%;
-  height: 260px !important;
+  height: 300px 
   object-fit: cover;
   display: block;
   transition: transform 0.35s ease;
-  transform-origin: center;
 }
 
 /* 🔥 FIX: non copre il titolo */
@@ -166,9 +164,6 @@ a:hover {
 }
 
 /* ===== CARD TEXT ===== */
-.card-info {
-  margin-top: 14px;
-}
 
 .card-info h3 {
   font-size: 20px;
@@ -292,7 +287,7 @@ footer {
 @media (max-width: 600px) {
   .logo { font-size: 36px; }
   .menu { gap: 16px; }
-  .menu a { font-size: 11px;
+  .menu a { font-size: 11px; }
   .card img {
     height: 240px;
   }
@@ -310,10 +305,6 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
- .card-info {
-    margin-top: 10px;
-    padding: 0 4px;
- }
 /* ===== FIX PC FINALI ===== */
 
 /* 1) CONTATTI + CHI SONO centrati di nuovo */
@@ -351,12 +342,13 @@ footer {
 
 /* 3) IMMAGINI PAGINA RECENSIONI (tutte identiche davvero) */
 .review-hero img {
+  position: absolute;
   width: 100%;
-  height: 300px !important;   /* 🔥 forza uguali */
+  height: 100px 
   object-fit: cover;
-  object-position: center;
-  display: block;
-}
+  top: 0;
+  left: 0:
+  }
 
 /* 4) HOME – testo leggermente più basso e centrato meglio */
 .card-info {
@@ -370,11 +362,6 @@ footer {
 margin-bottom: 4px;
 }
 
-.card-info p {
-  margin-top: 0;
-  opacity: 0.85;
-}
-
 /* 5) FIX HOVER (non copre mai il titolo) */
 .card {
   overflow: hidden;
@@ -382,28 +369,11 @@ margin-bottom: 4px;
   border-radius: 16px;
 }
 
-.card img {
-  transform-origin: center center;
-  position: relative;
-  z-index: 1;
-  display: block;
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
 .card:hover img {
  transform: scale(1.01);
 }
 
 /* HOME SEMPRE VERTICALE */
-.home-grid {
-  grid-template-columns: 1fr 
-}
-.card-info,
-.card h3,
-.card p {
-  position: static !important;
 }.archivio-grid {
   grid-template-columns: 1fr;
 }
