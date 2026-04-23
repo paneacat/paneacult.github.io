@@ -184,8 +184,8 @@ a:hover {
 
 /* ===== CARD TEXT ===== */
 .card-info {
-  margin-top: 10px;
   text-align: left;
+  margin-top: 6px;
 }
 
 .card-info p {
@@ -327,9 +327,10 @@ footer {
 
 .stelle {
   color: var(--gold);
-  font-size: 14px;
   letter-spacing: 2px;
   margin-bottom: 15px;
+  margin: 8px 0 6px; /* 🔥 meno spazio sotto */
+  font-size: 14px;
 }
 
 .firma {
