@@ -475,7 +475,7 @@ footer {
 }
 
 .watch span {
-  color: #777;
+  color: #666;
   margin-right: 6px;
 }
 
@@ -488,18 +488,18 @@ footer {
 
 .watch a:hover {
   border-color: var(--gold);
-}
+  
 .review-end {
   margin-top: 50px;
-  text-align: center;
+  text-align: left;
 }
-
 /* ⭐ STELLE */
 .stelle {
   color: var(--gold);
   font-size: 14px;
   letter-spacing: 2px;
   margin-bottom: 15px;
+  text-align: left;
 }
 
 /* ✍️ FIRMA */
@@ -508,6 +508,7 @@ footer {
   color: #ccc;
   line-height: 1.6;
   margin-bottom: 25px;
+  text-align: left;
 }
 
 .firma em {
@@ -517,6 +518,11 @@ footer {
 }
 
 /* 🔙 LINK */
+
+.back-home {
+  text-align: left;
+}
+  
 .back-home a {
   font-size: 13px;
   color: #888;
