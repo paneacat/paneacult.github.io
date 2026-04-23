@@ -296,3 +296,63 @@ footer {
     height: 340px;
   }
 }
+/* ===== FIX PC FINALI ===== */
+
+/* 1) CONTATTI + CHI SONO centrati di nuovo */
+.contact-container,
+.about-container {
+  max-width: 520px;
+  margin: 120px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* 2) FILTRI (titoli Rubrica / Genere centrati) */
+.filtri {
+  align-items: center;
+}
+
+.filtri-group {
+  width: 100%;
+  text-align: center;
+}
+
+.filtri-group h4 {
+  text-align: center;
+}
+
+/* 3) IMMAGINI PAGINA RECENSIONI (tutte identiche davvero) */
+.review-hero img {
+  width: 100%;
+  height: 300px !important;   /* 🔥 forza uguali */
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* 4) HOME – testo leggermente più basso e centrato meglio */
+.card-info {
+  margin-top: 18px;          /* più respiro sotto immagine */
+  padding-left: 4px;         /* micro allineamento */
+}
+
+.card-info h3 {
+  margin-bottom: 3px;
+}
+
+.card-info p {
+  margin-top: 0;
+}
+
+/* 5) FIX HOVER (non copre mai il titolo) */
+.card {
+  overflow: hidden;
+}
+
+.card img {
+  transform-origin: center center;
+}
+
+.card:hover img {
+  transform: scale(1.015);   /* ancora più delicato */
+}
