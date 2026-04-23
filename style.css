@@ -444,3 +444,22 @@ footer {
   color: #aaa;
   line-height: 1.2;
 }
+@media (max-width: 600px) {
+
+  .filtri-buttons {
+    justify-content: flex-start; /* ⬅️ da centro a sinistra */
+    gap: 8px;
+  }
+
+  .filtro {
+    font-size: 11px;
+    padding: 6px 10px;
+    min-width: auto; /* ⬅️ evita bottoni troppo larghi */
+  }
+
+  .filtri-group {
+    width: 100%;
+    align-items: flex-start; /* ⬅️ allinea tutto a sinistra */
+  }
+
+}
