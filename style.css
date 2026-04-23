@@ -102,6 +102,27 @@ a:hover {
   margin-top: 20px;
 }
 
+.filtri-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center; /* 🔥 questo li centra */
+}
+.filtro {
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #aaa;
+  transition: all 0.25s ease;
+}
+
+.filtro.attivo {
+  background: var(--gold);
+  color: #0b1f26;
+  border-color: var(--gold);
+}
 /* ===== CARD ===== */
 .card {
   position: relative;
@@ -112,15 +133,16 @@ a:hover {
 
 .card img {
   width: 100%;
-  height: 250px;
+  height: 260px !important;
   object-fit: cover;
   display: block;
   transition: transform 0.35s ease;
+  transform-origin: center;
 }
 
 /* 🔥 FIX: non copre il titolo */
 .card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 /* ===== RATING ===== */
