@@ -140,8 +140,12 @@ a:hover {
 
 .card img {
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
+  aspect-ratio: 16/9;
+  height: auto;
+  object-position: center;
+}
   transition: transform 0.35s ease;
 }
 
