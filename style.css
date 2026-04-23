@@ -326,6 +326,7 @@ footer {
   flex-direction: column;
   gap: 20px;
   margin-bottom: 40px;
+  margin-top: 30px;
 }
 
 .filtri-group {
