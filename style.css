@@ -25,9 +25,6 @@ a {
   text-decoration: none;
   color: var(--text);
 }
-a:hover {
-  color: var(--gold);
-}
 
 /* ===== HEADER ===== */
 .site-header {
@@ -39,7 +36,6 @@ a:hover {
   font-family: 'Playfair Display', serif;
   font-size: 52px;
   color: var(--gold);
-  display: block;
   margin-bottom: 12px;
 }
 
@@ -55,29 +51,16 @@ a:hover {
   letter-spacing: 1.5px;
   color: var(--muted);
   text-transform: uppercase;
-  position: relative;
 }
 
 .menu a.active {
   color: var(--gold);
 }
 
-.menu a.active::after {
-  content: "";
-  height: 1px;
-  width: 100%;
-  background: var(--gold);
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  opacity: 0.7;
-}
-
 /* ===== SOCIAL ===== */
 .social {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 16px;
   margin: 15px 0;
 }
@@ -104,40 +87,27 @@ a:hover {
 
 /* ===== CARD ===== */
 .card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-  -webkit-tap-highlight-color: transparent;
+  display: block;
 }
 
+/* 🔥 FIX IMPORTANTE */
 .card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
   display: block;
+  border-radius: 16px;
   transition: transform 0.35s ease;
 }
 
-/* 🔥 FIX: non copre il titolo */
+/* 👉 hover NON copre il testo */
 .card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
-/* ===== RATING ===== */
-.rating {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: rgba(0,0,0,0.6);
-  padding: 6px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  color: var(--gold);
-}
-
-/* ===== CARD TEXT ===== */
+/* ===== TESTO CARD ===== */
 .card-info {
-  margin-top: 6px;
+  margin-top: 10px; /* più spazio dall'immagine */
 }
 
 .card-info h3 {
@@ -147,44 +117,17 @@ a:hover {
   margin-bottom: 2px;
 }
 
+/* 🔥 REGISTA */
 .card-info p {
   font-size: 14px;
   color: #ccc;
-  margin-top: 0;
+  margin: 0;
   line-height: 1.2;
 }
 
-/* ===== NEWSLETTER (FIX RIPRISTINO) ===== */
-.newsletter {
-  margin: 80px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.newsletter-inner {
-  max-width: 420px;
-  margin: 0 auto;
-}
-
-.newsletter h2 {
-  color: var(--gold);
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
-.newsletter p {
-  font-size: 14px;
-  color: #aaa;
-  margin-bottom: 25px;
-}
-
-.newsletter-btn {
-  display: inline-block;
-  padding: 10px 22px;
-  border-radius: 24px;
-  background: var(--gold);
-  color: #0b1f26;
-  font-size: 14px;
+/* 🔥 blocca hover sul regista */
+.card:hover p {
+  color: #ccc;
 }
 
 /* ===== REVIEW PAGE ===== */
@@ -194,16 +137,17 @@ a:hover {
   padding: 0 20px;
 }
 
-/* 🔥 FIX IMMAGINI UGUALI */
+/* 🔥 IMMAGINI TUTTE UGUALI */
 .review-hero img {
   width: 100%;
-  height: 260px;
+  height: 280px;
   object-fit: cover;
   object-position: center;
   border-radius: 16px;
   display: block;
 }
 
+/* CONTENUTO */
 .review-container {
   max-width: 700px;
   margin: 20px auto;
@@ -217,7 +161,7 @@ a:hover {
   margin-bottom: 2px;
 }
 
-/* 🔥 FIX REGISTA ATTACCATO */
+/* 🔥 REGISTA ATTACCATO */
 .meta {
   font-size: 14px;
   color: #aaa;
@@ -225,12 +169,14 @@ a:hover {
   line-height: 1.2;
 }
 
+/* GENERE */
 .genere {
   font-size: 13px;
   color: #888;
   margin-bottom: 25px;
 }
 
+/* TESTO */
 .review-text {
   line-height: 1.8;
   color: #d6d6d6;
@@ -251,20 +197,29 @@ footer {
 
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
-  .logo { font-size: 36px; }
-  .menu { gap: 16px; }
-  .menu a { font-size: 11px; }
+
+  .logo {
+    font-size: 36px;
+  }
+
+  .menu {
+    gap: 16px;
+  }
+
+  .menu a {
+    font-size: 11px;
+  }
 
   .grid {
     grid-template-columns: 1fr;
   }
 
   .card img {
-    height: 240px;
+    height: 230px;
   }
 }
 
-/* ===== DESKTOP CINEMA ===== */
+/* ===== DESKTOP CINEMATIC ===== */
 @media (min-width: 768px) {
   .card img {
     height: 340px;
