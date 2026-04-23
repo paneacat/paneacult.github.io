@@ -140,11 +140,8 @@ a:hover {
 
 .card img {
   width: 100%;
-  object-fit: cover;
-  display: block;
   aspect-ratio: 16/9;
-  height: auto;
-  object-position: center;
+  object-fit: cover;
 }
   transition: transform 0.35s ease;
 }
@@ -404,4 +401,11 @@ margin-bottom: 4px;
   }
 .filtri-buttons:last-of-type .filtro {
   opacity: 0.85;
+}
+
+.archivio-grid .card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
 }
