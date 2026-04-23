@@ -130,6 +130,7 @@ a:hover {
 .filtro:hover {
   border-color: var(--gold);
   color: var(--gold);
+  background: rgba(255,191,0,0.1);
 }
 /* ===== CARD ===== */
 .card {
