@@ -285,44 +285,31 @@ footer {
 /* ===== FIX PC FINALI ===== */
 
 /* 1) CONTATTI + CHI SONO centrati di nuovo */
-.contact-container {
-  .about-container {
+.contact-container,
+.about-container {
   max-width: 620px;
   margin: 120px auto;
   padding: 0 20px;
   text-align: center;
   line-height: 1.9;
   font-size: 17px;
-    margin-bottom: 20px;
-}
 }
 .about-container p {
   margin-bottom: 14px;
   color: #d6d6d6;
-  text-align: center;
-  margin-bottom: 20px;
 }
 
 /* frase principale */
 .about-container p:first-child {
   color: var(--gold);
   letter-spacing: 0.3px;
-  text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 /* nome */
-.about-container p:nth-child(3) {
+.about-container p:nth-of-type(3)
   color: #ffffff;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* ultima frase leggermente più soft */
-.about-container p:last-child {
-  color: #aaa;
-  text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 @keyframes fadeUp {
