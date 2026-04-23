@@ -262,10 +262,14 @@ footer {
 
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
+  .card img {
+    aspect-ratio: 4/3;
+  }
+}
+@media (max-width: 600px) {
   .logo { font-size: 36px; }
   .menu { gap: 16px; }
   .menu a { font-size: 11px; }
-  .card img {
   }
 }
 
