@@ -343,11 +343,11 @@ footer {
 
 .filtri-group h4 {
   text-align: center;
-  font-size: 11px;
-  letter-spacing: 2px;
-  color: #888;
-  margin-bottom: 12px;
   text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 10px;
 }
 
 /* 3) IMMAGINI PAGINA RECENSIONI (tutte identiche davvero) */
