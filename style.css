@@ -218,6 +218,9 @@ a:hover {
   max-width: 700px;
   margin: 20px auto 10px;
   padding: 0 20px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 16px;
 }
 
 /* 🔥 FIX IMMAGINI UGUALI */
@@ -234,6 +237,9 @@ a:hover {
   max-width: 700px;
   margin: 20px auto;
   padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .review-container h1 {
@@ -334,6 +340,8 @@ footer {
 .card-info {
   margin-top: 18px;          /* più respiro sotto immagine */
   padding-left: 4px;         /* micro allineamento */
+  position: relative;
+  z-index: 2;
 }
 
 .card-info h3 {
@@ -347,10 +355,13 @@ footer {
 /* 5) FIX HOVER (non copre mai il titolo) */
 .card {
   overflow: hidden;
+  position: relative;
 }
 
 .card img {
   transform-origin: center center;
+  position: relative;
+  z-index: 1;
 }
 
 .card:hover img {
