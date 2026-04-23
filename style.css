@@ -161,15 +161,19 @@ padding: 20px 20px 5px;
 .card {
   position: relative;
   overflow: hidden;
+  transition: transform 0.25s ease;
 }
 .card-info {
   margin-top: 10px;
 }
 
 .card-info h3 {
-  font-size: 20px;
-  font-weight: 400;
-  color: var(--text);
+  transition: color 0.25s ease;
+}
+  .card:hover .card-info h3 {
+  color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-4px);
 }
 
 .card-info p {
@@ -386,7 +390,7 @@ footer {
 .watch-title {
   display: block;
   font-size: 13px;
-  color: var(--gold);
+  color: #fff;
   margin-bottom: 8px;
 }
 
@@ -442,4 +446,7 @@ footer {
 .watch-links a {
   font-weight: 500;
   letter-spacing: 0.3px;
+}
+.card-info h3 {
+  transition: color 0.25s ease;
 }
