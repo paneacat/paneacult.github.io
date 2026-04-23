@@ -122,9 +122,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-
   justify-content: flex-start;
-
+}
 /* BOTTONI */
 .filtro {
   font-size: 13px;
@@ -181,9 +180,6 @@ header {
 }
 
 /* ===== ARCHIVIO ===== */
-.grid {
-  grid-template-columns: repeat(2, 1fr);
-}
 
 .archivio .card img {
   height: 260px;
@@ -249,8 +245,12 @@ footer {
  .archivio .grid {
     grid-template-columns: 1fr;
   }
-    .grid {
-    grid-template-columns: 1fr;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 30px;
+}
   }
   .card img {
     height: 240px;
@@ -325,4 +325,5 @@ footer {
 
   .filtri-buttons {
     gap: 8px;
+}
 }
