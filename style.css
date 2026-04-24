@@ -676,10 +676,6 @@ footer {
 
 /* mobile */
 @media (max-width: 599px) {
- .home-grid {
-  gap: 30px;
-}
-
 .card {
   margin-bottom: 10px;
 }
@@ -731,7 +727,6 @@ footer {
 }
 .home-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
   .logo { font-size: 36px; }
@@ -776,13 +771,12 @@ footer {
 @media (min-width: 900px) {
 
   .home-grid {
-    grid-template-columns: 1fr;
-    max-width: 900px;
-    margin: 0 auto;
+  grid-template-columns: 1fr;
+  gap: 40px;
   }
 
   .home .card img {
-    height: 320px;
+    height: 220px;
     object-fit: cover;
     border-radius: 12px;
   }
@@ -798,5 +792,12 @@ footer {
   .rating {
     font-size: 15px;
   }
-
+  .archivio-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  }
+  .archivio-grid .card img {
+  height: 140px;
+  object-fit: cover;
+  }
 }
