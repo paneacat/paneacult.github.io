@@ -485,9 +485,26 @@ footer {
   font-size: 18px;
   margin-bottom: 20px;
 }
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  
+
+/* desktop */
+@media (min-width: 900px) {
+  .archivio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* tablet */
+@media (min-width: 600px) and (max-width: 899px) {
+  .archivio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* mobile */
+@media (max-width: 599px) {
+  .archivio-grid {
+    grid-template-columns: 1fr;
+  }
 .about-grid {
     grid-template-columns: 1fr;
     gap: 30px;
