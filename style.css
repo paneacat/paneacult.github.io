@@ -531,7 +531,10 @@ footer {
 .about {
   max-width: 1000px;
   margin: 80px auto;
-  padding: 0 20px;
+  padding: 0 20px
+  display: flex;
+  align-items: center; /* 🔥 questo sistema tutto */
+  gap: 60px;
 }
 .about img {
   width: 100%;
