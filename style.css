@@ -351,18 +351,21 @@ footer {
   letter-spacing: 2px;
 }
 .back-archivio {
-  margin-top: 20px;
+  margin-top: 25px;
+  margin-bottom: 10px;
   text-align: left;
 }
 
 .back-archivio a {
   font-size: 13px;
   color: #888;
-  transition: 0.2s;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 2px;
 }
 
 .back-archivio a:hover {
   color: var(--gold);
+  border-color: var(--gold);
 }
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
