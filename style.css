@@ -352,7 +352,6 @@ a:hover {
 .contact-extra a:hover {
   border-color: var(--gold);
 }
-}
 /* ===== NEWSLETTER ===== */
 
 .newsletter {
@@ -658,12 +657,11 @@ footer {
   .card img {
     aspect-ratio: 4/3;
   }
-  .home .card img {
-    height: 220px;
-  }
-  .home-grid .card img {
-  aspect-ratio: 4/3; /* 👈 resta più leggibile */
-  }
+  
+.home .card img {
+  aspect-ratio: 16 / 9;
+}
+
   .logo { font-size: 36px; }
   .menu { gap: 16px; }
   .menu a { font-size: 11px; }
