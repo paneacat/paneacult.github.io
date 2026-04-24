@@ -806,15 +806,17 @@ footer {
     margin-top: 60px;
     margin-bottom: 60px;
   }
-
   .newsletter h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 20px; /* prima 22 */
   }
 
   .newsletter p {
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 13px;
+  }
+
+  .newsletter-btn {
+    font-size: 13px;
+    padding: 8px 18px; /* leggermente più compatto */
   }
     .logo {
     font-size: 36px;   /* ora è ~52px → troppo grande */
