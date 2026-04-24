@@ -250,7 +250,7 @@ a:hover {
 .home-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 50px;
+  gap: 60px;
 }
 
 .archivio-grid {
@@ -772,4 +772,31 @@ footer {
     font-size: 14px;
     margin-bottom: 20px;
   }
+}
+@media (min-width: 900px) {
+
+  .home-grid {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .home .card img {
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .card-info h3 {
+    font-size: 26px;
+  }
+
+  .card-info p {
+    font-size: 15px;
+  }
+
+  .rating {
+    font-size: 15px;
+  }
+
 }
