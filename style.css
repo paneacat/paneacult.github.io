@@ -438,7 +438,11 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.08);
   max-width: 500px;
 }
-
+.firma-img {
+  margin-top: 20px;
+  width: 140px;
+  opacity: 0.9;
+}
 /* ===== REVIEW ===== */
 .review-hero {
   position: relative;
