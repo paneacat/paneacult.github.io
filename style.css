@@ -575,12 +575,6 @@ footer {
   margin-bottom: 10px;
 }
 
-.about-container p:first-child {
-  color: var(--gold);
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
 /* prima frase */
 .about-container .intro {
   font-size: 16px;
@@ -600,7 +594,9 @@ footer {
   font-size: 18px;
   margin-bottom: 20px;
 }
-
+.about-container p:last-of-type {
+  margin-bottom: 6px;
+}
 .about-grid {
   display: grid;
   align-items: center;
