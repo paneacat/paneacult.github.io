@@ -361,30 +361,20 @@ footer {
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 600px) {
   .archivio-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-@media (min-width: 1200px) {
   .archivio-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 600px) {
   .card img {
     aspect-ratio: 4/3;
   }
-}
-@media (max-width: 600px) {
   .contact-container,
   .about-container {
     margin: 50px auto 0; /* 🔥 più vicino al menu su mobile */
   }
-}
   .logo { font-size: 36px; }
   .menu { gap: 16px; }
   .menu a { font-size: 11px; }
@@ -404,7 +394,6 @@ footer {
     width: 100%;
     align-items: flex-start;
   }
-}
 
 /* ===== EXTRA ===== */
 .container {
@@ -463,4 +452,5 @@ footer {
 }
 .card-info h3 {
   color: var(--gold) !important;
+}
 }
