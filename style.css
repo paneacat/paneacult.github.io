@@ -324,12 +324,31 @@ footer {
 /* ===== HOME CINEMATICA ===== */
 
 .home-grid .card img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  aspect-ratio: 21/9;      /* 🔥 effetto cinema */
-  border-radius: 6px;      /* leggero, elegante */
+  aspect-ratio: 21/9;
+  border-radius: 6px;
+}
+
+.home-grid {
+  gap: 70px;
+}
+
+.home .card-info {
+  margin-top: 12px;
+}
+
+.home .card-info h3 {
+  font-size: 22px;
+}
+
+.home .card-info p {
+  font-size: 14px;
+}
+
+.rating {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  letter-spacing: 2px;
 }
 
 /* ===== MOBILE ===== */
