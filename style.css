@@ -111,7 +111,10 @@ a:hover {
   gap: 16px;
   margin: 15px 0;
 }
-
+.social a:hover {
+  color: var(--gold);
+  transform: translateY(-2px);
+}
 /* ===== HERO ===== */
 .hero {
   position: relative;
