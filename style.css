@@ -840,7 +840,9 @@ footer {
   }
   .contact-container {
     font-size: 15px; /* 🔥 base più piccola */
+    max-width: 320px;
     margin: 60px auto 40px;
+    text-align: center;
   }
 
   .contact-intro {
@@ -857,6 +859,19 @@ footer {
 
   .contact-extra {
     font-size: 15px;
+  }
+  .social {
+  display: flex;
+  justify-content: center; /* 🔥 fondamentale */
+  gap: 16px;
+  margin-top: 16px;
+  }
+
+  .contact-extra {
+  text-align: center;
+  }
+  .contact-container::before {
+  margin: 0 auto 10px;
   }
 }
 
