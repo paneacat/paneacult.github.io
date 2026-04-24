@@ -667,24 +667,11 @@ footer {
 #loadMoreBtn:hover {
   border-color: var(--gold);
   color: var(--gold);
-}
-/* desktop */
-@media (min-width: 900px) {
-  .archivio-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 
-/* tablet */
-@media (min-width: 600px) and (max-width: 899px) {
-  .archivio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* mobile */
+/* ===== MOBILE ===== */
 @media (max-width: 599px) {
 
+  /* HOME → griglia (FIX principale) */
   .home-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
@@ -713,9 +700,7 @@ footer {
     letter-spacing: 1px;
   }
 
-}
-
-
+  /* FILTRI */
   .filtro {
     padding: 4px 9px;
     font-size: 10.5px;
@@ -725,14 +710,15 @@ footer {
   .filtri-group {
     align-items: center;
   }
-  
-.newsletter {
-    margin-top: 60px;   /* 🔥 separa dalle card */
+
+  /* NEWSLETTER */
+  .newsletter {
+    margin-top: 60px;
     margin-bottom: 60px;
   }
 
   .newsletter h2 {
-    font-size: 22px;    /* leggermente più equilibrato */
+    font-size: 22px;
     margin-bottom: 10px;
   }
 
@@ -740,48 +726,41 @@ footer {
     font-size: 14px;
     margin-bottom: 20px;
   }
-}
-@media (min-width: 900px) {
 
-  .home-grid {
-  grid-template-columns: 1fr;
-  gap: 40px;
-  }
-
-  .home .card img {
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-
-  .card-info h3 {
-    font-size: 26px;
-  }
-
-  .card-info p {
-    font-size: 15px;
-  }
-
-  .rating {
-    font-size: 15px;
-  }
+  /* ARCHIVIO → griglia (FIX pulito) */
   .archivio-grid {
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
+
   .archivio-grid .card img {
-  height: 140px;
-  object-fit: cover;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
   }
+
 }
-.archivio-grid .card img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 10px;
+
+
+/* ===== TABLET ===== */
+@media (min-width: 600px) and (max-width: 899px) {
+
+  .archivio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
+
+
+/* ===== DESKTOP ===== */
 @media (min-width: 900px) {
 
+  /* ARCHIVIO */
+  .archivio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* HOME → cinematica */
   .home-grid {
     grid-template-columns: 1fr;
     max-width: 900px;
@@ -797,6 +776,10 @@ footer {
   }
 
   .card-info p {
+    font-size: 15px;
+  }
+
+  .rating {
     font-size: 15px;
   }
 
