@@ -274,7 +274,6 @@ a:hover {
 .archivio-grid p {
   font-size: 14px;
   color: #aaa;
-  gap: 30px;
 }
 .archivio-grid .card img {
   width: 100%;
@@ -365,7 +364,6 @@ a:hover {
 
 .newsletter {
   margin: 100px auto 80px;
-  margin-top: 80px;
   padding: 0 20px;
   text-align: center;
 }
@@ -667,7 +665,7 @@ footer {
 #loadMoreBtn:hover {
   border-color: var(--gold);
   color: var(--gold);
-
+}
 /* ===== MOBILE ===== */
 @media (max-width: 599px) {
 
