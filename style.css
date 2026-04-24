@@ -540,17 +540,28 @@ footer {
   max-width: 500px;
 }
 
+/* testo coerente con il sito */
+.firma-testo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 25px;
+}
+
+/* FIRMA centrata */
+.firma-img {
+  display: block;
+  margin: 0 auto;   /* 🔥 centro perfetto */
+  width: 140px;
+  opacity: 0.85;
+}
+
 .firma-manifesto p {
   font-family: 'Playfair Display', serif;
   font-size: 20px;
   line-height: 1.6;
   margin-bottom: 20px;
-}
-
-/* FIRMA */
-.firma-img {
-  width: 140px;
-  opacity: 0.85;
 }
 
 /* firma */
