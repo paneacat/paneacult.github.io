@@ -313,8 +313,20 @@ footer {
   line-height: 1.8;
   max-width: 650px;
 }
+.review-text p { margin-bottom: 20px; 
+}
+.rating {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+/* ===== HOME CINEMATICA ===== */
 
-.review-text p { margin-bottom: 20px; }
+.home-grid .card img {
+  aspect-ratio: 21/9;      /* 🔥 effetto cinema */
+  border-radius: 6px;      /* leggero, elegante */
+}
 
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
@@ -344,6 +356,7 @@ footer {
   .filtri-group {
     align-items: center;
   }
+  
 .newsletter {
     margin-top: 60px;   /* 🔥 separa dalle card */
     margin-bottom: 60px;
