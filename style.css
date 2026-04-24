@@ -549,8 +549,11 @@ footer {
   display: block;
   filter: grayscale(100%); /* 🔥 qui */
   transition: 0.4s ease;
-  border-radius: 14px;
+  border-radius: 0;
   max-width: 260px;
+  aspect-ratio: 3 / 4; /* 🔥 effetto ritratto editoriale */
+  object-fit: cover;
+  
   margin: 0 auto 16px; /* 🔥 meno spazio sotto */
 }
 .about-hero img:hover {
@@ -562,9 +565,9 @@ footer {
   line-height: 1.9;
   font-size: 16px;
   margin-top: 10px;
-  max-width: 320px;   /* 🔥 molto più stretto */
   margin: 20px auto 0;
-  text-align: center; /*
+  text-align: left;
+  max-width: 440px;
 }
 
 /* paragrafi */
@@ -603,11 +606,12 @@ footer {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 24px; /* 🔥 prima era troppo largo */
   align-items: center;
-  max-width: 780px; /* 🔥 riduce il vuoto */
   margin: 60px auto;
+  grid-template-columns: 260px 1fr;
+  gap: 30px;
+  align-items: center;
+  max-width: 800px;
 }
 
 .firma-manifesto {
@@ -825,8 +829,17 @@ footer {
     }
 .about-grid {
     grid-template-columns: 1fr;
-    text-align: center; 
-}
+    gap: 20px;
+  }
+
+  .about-hero img {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .about-container {
+    text-align: center;
+  }
 }
 
 
