@@ -543,7 +543,7 @@ footer {
 .firma-img {
   display: block;
   margin: 40px auto 0;   /* 🔥 centro perfetto */
-  opacity: 0.9;
+  opacity: 0.75;
   width: 220px;   
   transform: rotate(-1deg);
   filter: brightness(0) invert(1);
