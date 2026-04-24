@@ -610,13 +610,16 @@ footer {
 .about-grid {
   display: grid;
   align-items: center;
-  margin: 60px auto;
-  grid-template-columns: 260px 1fr;
-  gap: 30px;
-  align-items: center;
+  margin: 60px auto 0;
+  grid-template-columns: 220px 1fr;
+  gap: 60px;
   max-width: 800px;
+  align-items: start;
 }
 
+.about-text {
+  max-width: 520px;
+}
 .firma-manifesto {
   margin: 100px auto 0;
   max-width: 600px;
