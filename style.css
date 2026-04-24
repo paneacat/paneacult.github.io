@@ -256,7 +256,7 @@ a:hover {
 
 .archivio-grid {
   display: grid;
-  gap: 40px;
+  gap: 20px;
   max-width: 1100px;
   margin: 0 auto;
   margin-top: 50px;
@@ -706,7 +706,7 @@ footer {
 }
   
 .archivio-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 .about-grid {
     grid-template-columns: 1fr;
@@ -807,8 +807,7 @@ footer {
 }
 .archivio-grid .card img {
   width: 100%;
-  height: auto !important;
-  aspect-ratio: 1 / 1 !important;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 10px;
 }
