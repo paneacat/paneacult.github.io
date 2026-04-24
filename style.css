@@ -676,6 +676,36 @@ footer {
 
 /* mobile */
 @media (max-width: 599px) {
+ .home-grid {
+  gap: 30px;
+}
+
+.card {
+  margin-bottom: 10px;
+}
+
+.home .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-info h3 {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.card-info p {
+  font-size: 13px;
+}
+
+.rating {
+  font-size: 13px;
+  margin-top: 8px;
+}
+  
+  
   .archivio-grid {
     grid-template-columns: 1fr;
   }
