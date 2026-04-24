@@ -449,7 +449,9 @@ footer {
 }
 
 .home .card img {
-  aspect-ratio: 21/9; /* effetto banner */
+  width: 100%;
+  height: 300px;       /* o 280px */
+  object-fit: cover;   /* taglia, NON deforma */
 }
 .home .card-info {
   margin-top: 12px;
@@ -626,6 +628,9 @@ footer {
   }
   .card img {
     aspect-ratio: 4/3;
+  }
+  .home .card img {
+    height: 220px;
   }
   .home-grid .card img {
   aspect-ratio: 4/3; /* 👈 resta più leggibile */
