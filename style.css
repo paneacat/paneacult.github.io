@@ -540,13 +540,17 @@ footer {
   max-width: 500px;
 }
 
-/* frase */
 .firma-manifesto p {
   font-family: 'Playfair Display', serif;
   font-size: 20px;
   line-height: 1.6;
-  color: var(--text);
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+}
+
+/* FIRMA */
+.firma-img {
+  width: 140px;
+  opacity: 0.85;
 }
 
 /* firma */
