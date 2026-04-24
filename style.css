@@ -289,16 +289,6 @@ a:hover {
   margin: 0 auto 20px;
   opacity: 0.6;
 }
-.contact-container::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 1px;
-  background: var(--gold);
-  margin: 20px auto 0;
-  margin-bottom: 200px;
-  opacity: 0.6;
-}
 /* ===== CONTACT DESIGN ===== */
 
 .contact-intro {
@@ -351,6 +341,13 @@ a:hover {
 }
 .contact-extra a {
   color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,191,0,0.3);
+  transition: 0.2s ease;
+}
+
+.contact-extra a:hover {
+  border-color: var(--gold);
 }
 }
 /* ===== NEWSLETTER ===== */
