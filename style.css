@@ -424,10 +424,9 @@ footer {
 /* immagine */
 .about-hero img {
   width: 100%;
-  margin: 60px auto 30px;
-  border-radius: 6px;
+  max-width: 420px;
   display: block;
-  max-width: 360px;
+  filter: grayscale(100%); /* 🔥 qui */
 }
 
 /* testo */
@@ -491,8 +490,22 @@ footer {
   margin-bottom: 20px;
 }
 /* ===== MOBILE ===== */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  
+.about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 
+  .about-hero img {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+
+  .about-container {
+    text-align: center;
+  }
+}
   .card img {
     aspect-ratio: 4/3;
   }
