@@ -854,5 +854,15 @@ footer {
   .rating {
     font-size: 15px;
   }
+  .site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    text-align: center;
+  }
+  
 
 }
