@@ -349,18 +349,16 @@ a:hover {
   font-size: 18px;
   color: #777;
 }
-
 .contact-extra a {
   color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,191,0,0.3);
+  transition: 0.2s ease;
 }
+
 .contact-extra a:hover {
-  content: "";
-  display: block;
-  height: 1px;
-  background: var(--gold);
-  margin: 0 auto 20px;
-  opacity: 0.6;
-  }
+  border-color: var(--gold);
+}
 }
 /* ===== NEWSLETTER ===== */
 .newsletter {
