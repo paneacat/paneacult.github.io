@@ -218,6 +218,7 @@ a:hover {
 .card-info {
   text-align: left;
   margin-top: 6px;
+  font-size: 18px;
 }
 
 .card-info p {
@@ -271,10 +272,13 @@ a:hover {
 .archivio-grid p {
   font-size: 14px;
   color: #aaa;
+  gap: 30px;
 }
 .archivio-grid .card img {
-  aspect-ratio: 16/9;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  border-radius: 10px;
 }
 /* ===== PAGINE TESTO ===== */
 .contact-container,
