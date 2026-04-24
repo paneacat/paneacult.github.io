@@ -427,8 +427,11 @@ footer {
   max-width: 420px;
   display: block;
   filter: grayscale(100%); /* 🔥 qui */
+    transition: 0.4s ease;
 }
-
+.about-hero img:hover {
+  filter: grayscale(0%);
+}
 /* testo */
 .about-container {
   max-width: 520px;
@@ -467,13 +470,6 @@ footer {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-}
-
-/* immagine */
-.about-hero img {
-  width: 100%;
-  max-width: 420px;
-  display: block;
 }
 
 /* testo */
