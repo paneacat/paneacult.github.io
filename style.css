@@ -492,8 +492,21 @@ font-size: 28px;
 color: var(--gold);
 }
 
-.meta { font-size: 14px; color: #aaa; }
-.genere { font-size: 13px; color: #777; }
+.review-container p {
+  margin-bottom: 16px;
+}
+.meta {
+  margin-top: 6px;
+  margin-bottom: 4px;
+  font-size: 14px; 
+  color: #aaa;
+}
+
+.genere {
+  margin-bottom: 10px;
+ font-size: 13px; 
+color: #777;
+}
 
 .review-text {
 line-height: 1.8;
