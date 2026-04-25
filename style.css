@@ -539,10 +539,6 @@ max-width: 500px;
   object-position: center;
 }
 
-.hero-rbg img {
-  object-position: center 25%;
-}
-
 .review-container {
   max-width: 820px;
   margin: 40px auto;
