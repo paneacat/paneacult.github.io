@@ -748,6 +748,10 @@ font-size: 10px;
 letter-spacing: 0.8px;
 white-space: nowrap;
 }
+.break-desktop {
+  display: inline;
+  }
+  
 .hero {
 margin: 20px auto 30px;
 padding: 0 24px;
@@ -952,7 +956,9 @@ grid-template-columns: repeat(2, 1fr);
 /* ===== DESKTOP ===== */
 @media (min-width: 900px) {
 
-
+.break-desktop {
+    display: block;
+}
 .menu a {
 font-size: 13.5px;   / prima era 12px */
 letter-spacing: 1.8px;
