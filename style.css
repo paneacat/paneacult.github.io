@@ -834,8 +834,9 @@ border-radius: 999px;
 align-items: center;
 }
 .newsletter {
-margin-top: 60px;
-margin-bottom: 60px;
+margin: 100px auto 80px;
+padding: 0 20px;
+text-align: center;
 }
 .newsletter h2 {
 font-size: 20px; 
