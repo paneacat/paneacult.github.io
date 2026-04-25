@@ -40,39 +40,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let visibili = 0;
 
-    cards.forEach(card => {
+    cards.forEach((card, i) => {
 
-      const categoria = card.dataset.categoria;
-      const generi = (card.dataset.genere || "").split(" ");
+  const categoria = card.dataset.categoria;
+  const generi = (card.dataset.genere || "").split(" ");
 
-      const matchCategoria =
-        filtroCategoria === "tutti" || categoria === filtroCategoria;
+  const matchCategoria =
+    filtroCategoria === "tutti" || categoria === filtroCategoria;
 
-      const matchGenere =
-        filtroGenere === "tutti" || generi.includes(filtroGenere);
+  const matchGenere =
+    filtroGenere === "tutti" || generi.includes(filtroGenere);
 
-      if (matchCategoria && matchGenere) {
+  const delay = i * 40;
 
-  card.classList.remove("hide");
+  if (matchCategoria && matchGenere) {
 
-  // trigger animazione
-  setTimeout(() => {
-    card.classList.add("show");
-  }, 50);
+    card.classList.remove("hide");
 
-  visibili++;
+    setTimeout(() => {
+      card.classList.add("show");
+    }, delay);
 
-} else {
+    visibili++;
 
-  card.classList.remove("show");
+  } else {
 
-  setTimeout(() => {
-    card.classList.add("hide");
-  }, 200);
+    card.classList.remove("show");
 
-      }
+    setTimeout(() => {
+      card.classList.add("hide");
+    }, 200);
 
-    });
+  }
+
+});
 
     // ===== EMPTY STATE =====
     if (empty) {
