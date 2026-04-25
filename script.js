@@ -52,10 +52,24 @@ document.addEventListener('DOMContentLoaded', () => {
         filtroGenere === "tutti" || generi.includes(filtroGenere);
 
       if (matchCategoria && matchGenere) {
+
   card.classList.remove("hide");
+
+  // trigger animazione
+  setTimeout(() => {
+    card.classList.add("show");
+  }, 50);
+
   visibili++;
+
 } else {
-  card.classList.add("hide");
+
+  card.classList.remove("show");
+
+  setTimeout(() => {
+    card.classList.add("hide");
+  }, 200);
+
       }
 
     });
