@@ -40,25 +40,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== LOGICA FILTRO =====
   function aggiornaFiltri() {
 
-    cards.forEach(card => {
+  cards.forEach(card => {
 
-      const categoria = card.dataset.categoria;
-      const genere = card.dataset.genere;
+    const categoria = card.dataset.categoria;
+    const generi = card.dataset.genere.split(" "); // 👈 QUI CAMBIA TUTTO
 
-      const matchCategoria =
-        filtroCategoria === "tutti" || categoria === filtroCategoria;
+    const matchCategoria =
+      filtroCategoria === "tutti" || categoria === filtroCategoria;
 
-      const matchGenere =
-        filtroGenere === "tutti" || genere.includes(filtroGenere);
+    const matchGenere =
+      filtroGenere === "tutti" || generi.includes(filtroGenere);
 
-      if (matchCategoria && matchGenere) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
+    if (matchCategoria && matchGenere) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
 
-    });
+  });
 
   }
-
 });
