@@ -401,7 +401,9 @@ border-color: var(--gold);
 }
 .contact-container {
 margin: 160px auto 60px;
+text-align: center;
 }
+
 /* ===== NEWSLETTER ===== */
 
 .newsletter {
