@@ -747,6 +747,22 @@ transition: 0.2s ease;
 border-color: var(--gold);
 color: var(--gold);
 }
+
+.watch {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.watch a {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: rgba(255,191,0,0.15);
+  color: var(--gold);
+  font-size: 13px;
+}
+
 /* ===== MOBILE ===== */
 @media (max-width: 599px) {
 
