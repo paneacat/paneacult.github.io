@@ -1,36 +1,26 @@
-const cards = document.querySelectorAll(".archivio-grid .card");
-const btn = document.getElementById("loadMoreBtn");
+<script id="8v3k1m">
+const filtri = document.querySelectorAll('.filtro');
+const cards = document.querySelectorAll('.card');
 
-let visible = 6;
+filtri.forEach(btn => {
+  btn.addEventListener('click', () => {
+    
+    const filtro = btn.dataset.filter;
 
-// stato iniziale
-cards.forEach((card, index) => {
-  if (index >= visible) {
-    card.classList.add("hidden");
-    card.style.display = "none";
-  } else {
-    card.classList.add("show");
-  }
-});
+    // attivo visivo
+    filtri.forEach(b => b.classList.remove('attivo'));
+    btn.classList.add('attivo');
 
-btn.addEventListener("click", () => {
-  let newVisible = visible + 6;
+    cards.forEach(card => {
+      const categoria = card.dataset.categoria;
 
-  cards.forEach((card, index) => {
-    if (index >= visible && index < newVisible) {
-      card.style.display = "block";
+      if (filtro === "tutti" || categoria === filtro) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
 
-      // piccolo delay per animazione smooth
-      setTimeout(() => {
-        card.classList.remove("hidden");
-        card.classList.add("show");
-      }, 50 * (index - visible));
-    }
   });
-
-  visible = newVisible;
-
-  if (visible >= cards.length) {
-    btn.style.display = "none";
-  }
 });
+</script>
