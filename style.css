@@ -509,9 +509,24 @@ color: var(--gold);
 .genere {
   margin-bottom: 10px;
  font-size: 13px; 
-color: #777;
+  padding: 6px 14px;
+  font-size: 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #777;
+  transition: 0.2s;
 }
 
+.genere.attivo {
+  background: var(--gold);
+  color: #0b1f26;
+  border-color: var(--gold);
+}
+
+.genere:not(.attivo):hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
 .review-text {
 max-width: 650px;
   font-size: 17px;
