@@ -753,10 +753,7 @@ line-height: 1.6;
 max-width: 95%;
 margin: 0 auto;
 }
-.about-hero img {
-max-width: 160px;
-margin: 20px auto;
-}
+
 .home-grid {
 grid-template-columns: 1fr;
 gap: 50px;
@@ -878,7 +875,7 @@ margin: 0 auto;
   margin-bottom: 10px;
 }
 .about-container .intro {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
 }
 
