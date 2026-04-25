@@ -655,6 +655,10 @@ margin-bottom: 20px;
 }
 
 /* ===== HOME CINEMATICA ===== */
+.home .card {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
 
 .home-grid .card img {
 border-radius: 6px
