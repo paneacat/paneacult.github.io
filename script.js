@@ -11,31 +11,36 @@ document.addEventListener('DOMContentLoaded', () => {
   let filtroCategoria = "tutti";
   let filtroGenere = "tutti";
 
-  let visibiliMax = 3; // 🔥 QUANTI FILM MOSTRI ALL’INIZIO
+  let visibiliMax = 3; // iniziali
+  const step = 3;      // quanti ne aggiungi
 
-  // ===== FILTRI CLICK =====
+  // ===== NORMALIZZAZIONE =====
+  const norm = (v) => (v || "").trim().toLowerCase();
+
+  // ===== CLICK CATEGORIE =====
   bottoniCategoria.forEach(btn => {
     btn.addEventListener('click', () => {
 
-      filtroCategoria = btn.dataset.filter || "tutti";
+      filtroCategoria = norm(btn.dataset.filter) || "tutti";
 
       bottoniCategoria.forEach(b => b.classList.remove('attivo'));
       btn.classList.add('attivo');
 
-      visibiliMax = 2; // reset quando cambi filtro
+      visibiliMax = step; // reset coerente
       aggiornaFiltri();
     });
   });
 
+  // ===== CLICK GENERI =====
   bottoniGenere.forEach(btn => {
     btn.addEventListener('click', () => {
 
-      filtroGenere = btn.dataset.genere || "tutti";
+      filtroGenere = norm(btn.dataset.genere) || "tutti";
 
       bottoniGenere.forEach(b => b.classList.remove('attivo'));
       btn.classList.add('attivo');
 
-      visibiliMax = 2;
+      visibiliMax = step;
       aggiornaFiltri();
     });
   });
@@ -43,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== LOAD MORE =====
   if (loadMoreBtn) {
     loadMoreBtn.addEventListener('click', () => {
-      visibiliMax += 3; // 🔥 quanti ne aggiungi ogni click
+      visibiliMax += step;
       aggiornaFiltri();
     });
   }
@@ -51,14 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== FILTRO =====
   function aggiornaFiltri() {
 
-    let visibili = 0;
     let filtrati = [];
 
-    // 1. filtro base
+    // 1. FILTRO BASE
     cards.forEach(card => {
 
-      const categoria = card.dataset.categoria || "";
-      const generi = (card.dataset.genere || "").split(" ");
+      const categoria = norm(card.dataset.categoria);
+
+      const generi = (card.dataset.genere || "")
+        .split(" ")
+        .map(g => g.trim().toLowerCase())
+        .filter(Boolean); // rimuove vuoti
 
       const matchCategoria =
         filtroCategoria === "tutti" || categoria === filtroCategoria;
@@ -74,16 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    // 2. mostra solo fino a visibiliMax
+    // 2. MOSTRA PROGRESSIVO
     filtrati.forEach((card, i) => {
-
-      if (i < visibiliMax) {
-        card.style.display = "block";
-        visibili++;
-      } else {
-        card.style.display = "none";
-      }
-
+      card.style.display = i < visibiliMax ? "block" : "none";
     });
 
     // ===== EMPTY STATE =====
@@ -97,18 +98,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // ===== LOAD MORE VISIBILITY =====
+    // ===== LOAD MORE =====
     if (loadMoreBtn) {
-      if (filtrati.length > visibiliMax) {
-        loadMoreBtn.style.display = "inline-block";
-      } else {
-        loadMoreBtn.style.display = "none";
-      }
+      loadMoreBtn.style.display =
+        filtrati.length > visibiliMax ? "inline-block" : "none";
     }
 
   }
 
-  // inizializza
+  // ===== INIT =====
   aggiornaFiltri();
 
 });
