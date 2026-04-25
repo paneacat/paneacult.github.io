@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const bottoniGenere = document.querySelectorAll('[data-genere]');
   const cards = document.querySelectorAll('.card');
   const empty = document.getElementById('emptyState');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
 
   // ===== STATI =====
   let filtroCategoria = "tutti";
@@ -61,25 +62,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    // ===== EMPTY STATE (SAFE) =====
-    if (!empty) return;
+    // ===== EMPTY STATE =====
+    if (empty) {
+      if (visibili === 0) {
+        empty.style.display = "block";
 
-    if (visibili === 0) {
+        setTimeout(() => {
+          empty.classList.add("show");
+        }, 50);
 
-      empty.style.display = "block";
+      } else {
+        empty.classList.remove("show");
 
-      setTimeout(() => {
-        empty.classList.add("show");
-      }, 50);
+        setTimeout(() => {
+          empty.style.display = "none";
+        }, 300);
+      }
+    }
 
-    } else {
-
-      empty.classList.remove("show");
-
-      setTimeout(() => {
-        empty.style.display = "none";
-      }, 300);
-
+    // ===== LOAD MORE (FIX UX) =====
+    if (loadMoreBtn) {
+      if (visibili === 0) {
+        loadMoreBtn.style.display = "none";
+      } else {
+        loadMoreBtn.style.display = "inline-block";
+      }
     }
 
   }
