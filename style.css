@@ -877,8 +877,11 @@ margin: 0 auto;
   line-height: 1.6;
   margin-bottom: 10px;
 }
+.about-container .intro {
+    font-size: 16px;
+    line-height: 1.5;
+}
 
-/* prima frase più editoriale */
 .about-container p:first-child {
   font-size: 18px;
   color: var(--gold);
