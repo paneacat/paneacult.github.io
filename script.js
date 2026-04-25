@@ -40,10 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== LOGICA FILTRO =====
   function aggiornaFiltri() {
 
+  let visibili = 0; // 👈 contatore
+
   cards.forEach(card => {
 
     const categoria = card.dataset.categoria;
-    const generi = card.dataset.genere.split(" "); // 👈 QUI CAMBIA TUTTO
+    const generi = card.dataset.genere.split(" ");
 
     const matchCategoria =
       filtroCategoria === "tutti" || categoria === filtroCategoria;
@@ -53,10 +55,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (matchCategoria && matchGenere) {
       card.style.display = "block";
+      visibili++; // 👈 conta
     } else {
       card.style.display = "none";
     }
 
+  });
+
+  const empty = document.getElementById("emptyState");
+
+  if (visibili === 0) {
+    empty.style.display = "block";
+  } else {
+    empty.style.display = "none";
+  }
+
+  }
   });
 
   }
