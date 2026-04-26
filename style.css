@@ -279,9 +279,9 @@ align-items: center;
 /* tutte le righe (default mobile) */
 .filtri-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
   justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 /* 🔥 SOLO l’ultima riga (Biopic) */
@@ -296,6 +296,7 @@ align-items: center;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: flex-start;
 }
 
 /* forza Biopic a capo */
@@ -318,7 +319,11 @@ letter-spacing: 0.3px;
   border: 1px solid rgba(255,255,255,0.25);
   transition: all 0.2s ease;
 }
-
+.filtro[data-genere="biopic"] {
+  flex-basis: 100%;     /* va a capo */
+  width: fit-content;   /* NON occupa tutta la riga */
+  margin-top: 6px;
+}
 .filtri-row.generi {
   display: flex;
   justify-content: flex-start;
