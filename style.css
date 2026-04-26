@@ -695,17 +695,23 @@ font-size: 22px;
 font-size: 14px;
 }
 
-.rating {
+.review-rating {
   position: absolute;
   bottom: 45px;
   left: 16px;
   z-index: 2;
-  color: #ffbf00;
-  font-size: 14px;
+  color: var(--gold);
+  font-size: 16px;
+  margin: 10px 0 20px;
+  letter-spacing: 2px;
 }
-
+.rating {
+  position: absolute;
+  
 .firma-review {
   margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0.7;
 }
 
 .back-archivio {
