@@ -293,7 +293,19 @@ align-items: center;
 }
 
 .filtri-row.generi {
-  max-width: 420px; /* 🔥 forza la seconda riga pulita */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* forza Biopic a capo */
+.filtri-row.generi button[data-genere="biopic"] {
+  flex-basis: 100%;   /* 🔥 va a capo */
+}
+
+/* allineamento sotto "Tutti" */
+.filtri-row.generi button[data-genere="biopic"] {
+  margin-left: 0; /* parte da sinistra */
 }
 
 .filtro {
@@ -307,11 +319,21 @@ letter-spacing: 0.3px;
   transition: all 0.2s ease;
 }
 
-.filtro[data-genere="biopic"] {
-  flex-basis: 100%; /* 🔥 va a capo */
-  max-width: fit-content;
-  margin-top: 6px;
-  margin-left: 0;
+.filtri-row.generi {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* forza Biopic a capo */
+.filtri-row.generi button[data-genere="biopic"] {
+  flex-basis: 100%;   /* 🔥 va a capo */
+}
+
+/* allineamento sotto "Tutti" */
+.filtri-row.generi button[data-genere="biopic"] {
+  margin-left: 0; /* parte da sinistra */
 }
 .filtro.attivo {
 background: var(--gold);
