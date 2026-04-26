@@ -407,6 +407,7 @@ transition: 0.2s ease;
   letter-spacing: 0.2px;
   margin-bottom: 0; /* 🔥 più vicino al regista */
   line-height: 1.2;
+  margin-top: 0;
 }
 
 /* ===== LAYOUT ===== */
@@ -689,8 +690,11 @@ margin-bottom: 20px;
 .home .card {
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 20px;
 }
-
+.home-grid {
+  gap: 40px;
+}
 .home-grid .card img {
 border-radius: 6px
 }
@@ -725,10 +729,10 @@ font-size: 14px;
 
 .rating {
   display: block;
-  margin-top: 12px;   /* 🔥 distacco dall’immagine */
-  margin-bottom: 0;
   text-align: left;   /* 🔥 allineate a sinistra */
-  position: static;  
+  position: static;
+  margin-top: 8px;
+  margin-bottom: 6px;
 }
 
 .firma-review {
@@ -996,8 +1000,8 @@ margin: 0 auto;
  
 .home-grid {
 grid-template-columns: 1fr;
-gap: 28px;
 padding: 0 16px;
+gap: 30px;
 }
   
 .archivio-grid {
@@ -1016,7 +1020,9 @@ width: 100%;
 height: 200px;
 object-fit: cover;
 border-radius: 14px;
+  margin-bottom: 10px;
 }
+
 .home .card-info {
 margin-top: 10px;
 }
