@@ -1221,6 +1221,9 @@ align-items: center;
     max-width: none; /* 🔥 IMPORTANTISSIMO */
   align-items: center;
   }
+  filtri-grid {
+    grid-template-columns: repeat(6, auto); /* 🔥 qui si allinea */
+  }
 .filtri-row {
   justify-content: center;
   flex-wrap: nowrap; /* 🔥 niente a capo */
