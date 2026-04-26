@@ -397,16 +397,15 @@ padding: 0 20px;
 .archivio-grid {
 display: grid;
 gap: 24px;
-margin-top: 40px;
+margin: 40px auto 0;
 max-width: 1100px;
-margin: 0 auto;
 min-height: 300px;
 grid-template-columns: repeat(2, 1fr);
 }
 
 .archivio-grid h3 {
 font-weight: 500;
-color: var(--gol);
+color: var(--gold);
 margin-top: 10px;
 }
 
@@ -1209,10 +1208,8 @@ align-items: center;
   .filtri {
     align-items: flex-start;
   }
-
   .filtri-row {
-    justify-content: center;
-    max-width: 420px;
+  justify-content: center;
   }
 
 }
