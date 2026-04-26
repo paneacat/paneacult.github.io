@@ -1170,9 +1170,25 @@ margin: 0 auto 10px;
 font-size: 13.5px;   
 letter-spacing: 1.8px;
 }
-.archivio-grid {
+
+  .archivio-grid {
     grid-template-columns: repeat(3, 1fr);
-}
+    max-width: 800px; /* 🔥 restringe tutto */
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .archivio-grid .card img {
+    aspect-ratio: 1 / 1; /* 🔥 quadrato */
+  }
+
+  .archivio-grid .card-info h3 {
+    font-size: 14px;
+  }
+
+  .archivio-grid .card-info p {
+    font-size: 12px;
+  }
   .about-grid {
   gap: 30px;
   align-items: stretch;
@@ -1228,6 +1244,7 @@ margin: 0 auto;
 }
 .home .card img {
 aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 .card-info h3 {
