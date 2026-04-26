@@ -652,7 +652,6 @@ margin-bottom: 20px;
   margin-bottom: 20px;
 }
 .home-grid {
-  display: grid;
   grid-template-columns: 1fr; /* 🔥 sempre 1 colonna */
   gap: 30px;
   max-width: 700px;
@@ -1231,18 +1230,23 @@ letter-spacing: 1.8px;
 /* HOME → cinematica */
   
 .home-grid {
-  grid-template-columns: 1fr; /* 🔥 UNA SOLA COLONNA */
-  max-width: 700px;
-  margin: 0 auto;
-  gap: 30px;
-}
-  .home .home-grid {
+    display: grid;
     grid-template-columns: 1fr;
-}
-.home .card img {
-aspect-ratio: 16 / 9;
+    max-width: 750px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+
+  .home .card {
+    width: 100%;
+  }
+
+  .home .card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
-}
+    border-radius: 12px;
+  }
 
 .card-info h3 {
 font-size: 26px;
