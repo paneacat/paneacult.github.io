@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. MOSTRA PROGRESSIVO
     filtrati.forEach((card, i) => {
-      card.style.display = i < visibiliMax ? "block" : "none";
+      card.classList.remove("hidden");
     });
 
     // ===== EMPTY STATE =====
