@@ -303,7 +303,7 @@ margin-top: 20px;
 
 .card img {
   width: 100%;
-  aspect-ratio: 16 / 9; /* 🔥 cinematico */
+  aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
@@ -666,12 +666,8 @@ border-radius: 6px
 }
 
 .home .card img {
-width: 100%;
-aspect-ratio: 16 / 9;
-object-fit: cover;
-border-radius: 12px;
-display: block;
-transition: transform 0.3s ease;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
 
 .home .card-info h3 {
