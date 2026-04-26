@@ -705,13 +705,11 @@ font-size: 14px;
 }
 
 .firma-review img {
-  width: 200px; /* 👈 dimensione giusta (non enorme) */
-  max-width: 75%;
+width: 240px; /* 👈 più grande */
+  max-width: 80%;
   display: block;
-
   opacity: 0.9;
-
-  filter: brightness(0) invert(1); /* 🔥 la rende bianca */
+  filter: brightness(0) invert(1);
 }
 
 .back-archivio {
