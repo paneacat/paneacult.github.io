@@ -1275,6 +1275,6 @@ align-items: center;
     flex: 0 0 auto;
   }
 .about-grid {
-  gap: 30px;
+  gap: 15px;
 }
 }
