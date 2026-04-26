@@ -653,8 +653,10 @@ margin-bottom: 20px;
 }
 .home-grid {
   display: grid;
-  grid-template-columns: 1fr; /* 🔥 UNA COLONNA */
+  grid-template-columns: 1fr; /* 🔥 sempre 1 colonna */
   gap: 30px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .home .card img {
@@ -956,9 +958,7 @@ margin: 0 auto;
 
  
 .home-grid {
-grid-template-columns: repeat(2, 1fr);
-gap: 20px;
-  padding: 0 16px;
+  grid-template-columns: 1fr; /* 🔥 fix definitivo */
 }
   
 .archivio-grid {
