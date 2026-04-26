@@ -836,11 +836,12 @@ margin-top: 20px !important;
 .firma-img {
 display: block;
 filter: brightness(0) invert(1);
-width: 200px;
 transform: rotate(-1deg);
 margin: 6px auto 0;
 margin-top: 0 !important;
   opacity: 0.8;
+  width: 240px;   /* 👈 aumenta qui */
+  max-width: 80%;
 }
 
 .firma-manifesto p {
