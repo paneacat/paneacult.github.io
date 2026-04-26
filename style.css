@@ -1187,20 +1187,30 @@ letter-spacing: 1.8px;
 }
   .about-grid {
   gap: 30px;
-  align-items: stretch;
+  align-items: center;
   }
 
 .about-hero img {
-  width: 220px;
-  margin-top: 45px;
-  height: 220px;      /* 🔥 fondamentale: deve essere uguale alla width */
-  object-fit: cover;  /* 🔥 evita deformazioni */
-  border-radius: 50%; /* 🔥 QUESTO la rende rotonda */
-  display: block;
-  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+
+  object-fit: cover;
+  object-position: center 25%; /* 🔥 faccia centrata */
+
+  border-radius: 50%;
+
+  margin: 0; /* 🔥 allineata al testo */
+
+  filter: grayscale(100%);
+  transition: 0.3s ease;
+
   box-shadow:
-  0 0 25px rgba(255,191,0,0.2),
-  0 0 60px rgba(255,191,0,0.08);
+    0 0 25px rgba(255,191,0,0.2),
+    0 0 60px rgba(255,191,0,0.08);
+}
+
+.about-hero img:hover {
+  filter: grayscale(0%);
 }
   
   .about-container {
