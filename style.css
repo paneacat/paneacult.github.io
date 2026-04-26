@@ -1199,10 +1199,12 @@ letter-spacing: 1.8px;
   align-items: stretch;
   }
 
-.about-hero {
-  display: flex;
-  align-items: flex-start; /* 🔥 cambia questo */
-  margin-top: -8px;
+.about-hero img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 10px; /* 👈 SPINGE LA FOTO GIÙ */
 }
 
 .about-hero img {
