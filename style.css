@@ -147,7 +147,7 @@ position: absolute;
 height: 1px;
 width: 100%;
 background: var(--gold);
-bottom: -4px
+bottom: -4px;
 left: 0;
 opacity: 0.7;
 }
@@ -1233,20 +1233,23 @@ align-items: center;
     max-width: none; /* 🔥 IMPORTANTISSIMO */
   align-items: center;
   }
-  filtri-grid {
+ .filtri-grid {
     grid-template-columns: repeat(6, auto); /* 🔥 qui si allinea */
   }
-.filtri-row {
+
+  .filtri-row {
+  display: flex;
   justify-content: center;
-  flex-wrap: nowrap; /* 🔥 niente a capo */
   gap: 12px;
+  flex-wrap: wrap; /* 🔥 TORNA NORMALE */
 }
 
-.filtri-row.generi {
-    display: grid;
-    grid-template-columns: repeat(6, auto);
-    justify-content: center;
-    gap: 12px;
+.filtri-row.top {
+  margin-bottom: 6px;
+}
+
+.filtri-row.bottom {
+  max-width: 800px; /* 🔥 controlla la larghezza */
 }
   .filtri-row.generi::-webkit-scrollbar {
     display: none;                  /* Chrome */
