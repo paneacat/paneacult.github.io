@@ -1224,6 +1224,7 @@ align-items: center;
     overflow-x: auto;
     justify-content: flex-start;
     gap: 12px;
+  max-width: none;
   }
 
   .filtri-row.generi .filtro {
