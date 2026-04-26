@@ -1209,7 +1209,9 @@ letter-spacing: 1.8px;
   height: 220px;
   border-radius: 50%;
   object-fit: cover;
+  transform: translateY(-15px);
 }
+  
   .about-container {
   margin: 0;
   margin-top: 40px;
