@@ -1207,19 +1207,26 @@ letter-spacing: 1.8px;
 }
 
   .about-grid {
-    gap: 28px;
+    gap: 30px;
     align-items: end;
   }
-
+.about-hero img {
+  max-width: 240px; /* 🔥 prima era ~200-220 */
+  transform: scale(1.05); /* leggero ingrandimento */
+}
   .about-container {
     margin: 0;
+    transform: translateY(-10px);
     max-width: 500px; /* leggero controllo, non stretto */
   }
-  
+  .about-container p {
+  margin-bottom: 12px;
+  }
 /* HOME → cinematica */
 .home-grid {
 grid-template-columns: 1fr;
 max-width: 900px;
+margin-bottom: 18px;
 margin: 0 auto;
 }
 
