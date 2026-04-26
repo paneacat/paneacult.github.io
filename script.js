@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let filtroGenere = "tutti";
 
   function getStep() {
-    return window.innerWidth >= 900 ? 6 : 4;
+  return window.innerWidth >= 900 ? 3 : 4;
   }
-
+  
   let step = getStep();
   let visibiliMax = step;
 
