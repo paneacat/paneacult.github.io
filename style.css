@@ -1048,16 +1048,6 @@ object-fit: cover;
 border-radius: 10px;
 }
 
-/* FILTRI */
-.filtro {
-border-radius: 999px;
-  padding: 5px 10px; /* più piccoli ma cliccabili */
-    font-size: 11px;
-}
-
-.filtri-group {
-align-items: center;
-}
 .newsletter {
 margin-bottom: 70px;
 margin-top: 80px;
