@@ -701,9 +701,30 @@ font-size: 14px;
 }
 
 .firma-review {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  opacity: 0.7;
+  margin-top: 14px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.85;
+}
+
+.firma-review .nome {
+  color: #fff;
+  font-weight: 500;
+}
+
+.firma-review .brand {
+  font-style: italic;
+  color: var(--gold);
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+
+.firma-review .brand::before {
+  content: "—";
+  margin-right: 6px;
+  opacity: 0.5;
 }
 
 .back-archivio {
