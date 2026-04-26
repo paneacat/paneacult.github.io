@@ -1134,33 +1134,41 @@ text-align: center;
 .contact-container::before {
 margin: 0 auto 10px;
 }
-  .filtri {
-    gap: 16px;
-    margin: 25px auto 30px;
-  }
+/* ===== FILTRI SCROLL MOBILE ===== */
+.filtri {
+  gap: 16px;
+  margin: 25px 0 30px;
+}
 
-  .filtri-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-  }
+/* righe scrollabili */
+.filtri-row {
+  display: flex;
+  flex-wrap: nowrap; /* 🔥 niente a capo */
+  gap: 10px;
 
-  /* CATEGORIE (più importanti) */
-  .filtri-row.top {
-    max-width: 320px;
-  }
+  overflow-x: auto;
+  padding: 0 20px; /* margine visivo */
 
-  /* GENERI */
-  .filtri-row.bottom {
-    max-width: 280px;
-  }
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 
-  .filtro {
-    font-size: 11px;
-    padding: 7px 14px;
-  }
+  justify-content: flex-start; /* 🔥 importante */
+}
+
+/* nasconde scrollbar (ma scroll funziona) */
+.filtri-row::-webkit-scrollbar {
+  display: none;
+}
+.filtri-row {
+  scrollbar-width: none;
+}
+
+/* bottoni non si restringono */
+.filtro {
+  flex: 0 0 auto; /* 🔥 fondamentale */
+  font-size: 11px;
+  padding: 7px 14px;
+}
 }
 
 /* ===== TABLET ===== */
