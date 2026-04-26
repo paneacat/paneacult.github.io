@@ -255,12 +255,16 @@ margin-top: 20px;
 .filtri {
   display: flex;
   flex-direction: column;
-  margin: 30px auto 30px;
-  gap: 10px;
-  align-items: stretch;   /* 🔥 importantissimo */
+  align-items: stretch;
   width: 100%;
-  max-width: none;
-  }
+}
+
+.filtri-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
 }
 .filtri::after {
   content: "";
@@ -270,15 +274,6 @@ margin-top: 20px;
   height: 1px;
   background: rgba(255,255,255,0.1);
   margin-top: 10px;
-}
-
-/* righe */
-.filtri-row {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center; /* 🔥 centro vero */
 }
 
 .filtri-row.generi {
