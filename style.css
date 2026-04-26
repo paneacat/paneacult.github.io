@@ -1274,5 +1274,7 @@ align-items: center;
   .filtri-row.generi .filtro {
     flex: 0 0 auto;
   }
-
+.about-grid {
+  gap: 30px;
+}
 }
