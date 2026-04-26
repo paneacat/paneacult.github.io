@@ -1221,15 +1221,12 @@ align-items: center;
   gap: 12px;
 }
 
- .filtri-row.generi {
-    flex-wrap: nowrap;              /* 🔥 niente a capo */
-    overflow-x: auto;               /* 🔥 scroll */
-    justify-content: flex-start;    /* 🔥 parte da sinistra */
-    gap: 12px;
-    padding-bottom: 6px;            /* spazio per scroll */
-    scrollbar-width: none;          /* Firefox */
-  }
-
+.filtri-row.generi {
+    flex-wrap: wrap;         /* 🔥 torna a capo */
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
   .filtri-row.generi::-webkit-scrollbar {
     display: none;                  /* Chrome */
   }
