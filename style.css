@@ -402,13 +402,11 @@ padding: 0 20px;
 
 
 .archivio-grid {
-display: grid;
-gap: 24px;
-margin: 40px auto 0;
-max-width: 1100px;
-min-height: 300px;
-grid-template-columns: repeat(2, 1fr);
-margin-top: 20px;
+  display: grid;
+  gap: 24px;
+  max-width: 900px; /* 🔥 più stretto = più elegante */
+  margin: 20px auto 0; /* 🔥 centrato davvero */
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .archivio-grid h3 {
@@ -908,9 +906,11 @@ opacity: 1;
 transform: translateY(0);
 transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
 .load-more {
-text-align: center;
-margin: 40px 0 10px;
+  display: flex;
+  justify-content: center; /* 🔥 centrato */
+  margin: 30px 0 10px;
 }
 
 #loadMoreBtn {
