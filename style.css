@@ -255,10 +255,12 @@ margin-top: 20px;
 .filtri {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 30px auto 30px;
   gap: 10px;
-  max-width: 700px; /* 🔥 più largo */
+  align-items: stretch;   /* 🔥 importantissimo */
+  width: 100%;
+  max-width: none;
+  }
 }
 .filtri::after {
   content: "";
@@ -273,6 +275,7 @@ margin-top: 20px;
 /* righe */
 .filtri-row {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center; /* 🔥 centro vero */
