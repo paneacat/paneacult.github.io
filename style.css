@@ -1201,15 +1201,12 @@ margin: 0 auto 10px;
   font-size: 11px;
   padding: 7px 14px;
 }
-  .subtitle {
-  margin-top: 12px;
-  font-weight: 300;
-  font-size: 0.95rem;      /* più piccolo */
-  line-height: 1.4;        /* meno aria */
-  color: var(--muted);
-  max-width: 420px;        /* 🔥 QUESTO cambia tutto */
-  margin-bottom: 16px;
-  }
+
+.subtitle {
+    font-size: 0.88rem;
+  line-height: 1.4;
+    max-width: 280px;
+}
 
 /* ===== TABLET ===== */
 @media (max-width: 899px) {
