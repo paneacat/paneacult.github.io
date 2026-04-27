@@ -1206,6 +1206,8 @@ margin: 0 auto 10px;
     font-size: 0.9rem !important;
   line-height: 1.4;
     max-width: 280px;
+  text-align: left;
+  white-space: nowrap;
 }
 
 /* ===== TABLET ===== */
