@@ -923,6 +923,14 @@ color: var(--gold);
   background: rgba(255,191,0,0.25);
 }
 
+.series {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
 /* ===== MOBILE ===== */
 @media (max-width: 599px) {
 
@@ -1191,7 +1199,6 @@ margin: 0 auto 10px;
   max-width: 650px;
   font-weight: 300;
   }
-}
 
 /* ===== TABLET ===== */
 @media (max-width: 899px) {
