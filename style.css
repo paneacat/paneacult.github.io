@@ -1205,11 +1205,11 @@ margin: 0 auto 10px;
 .subtitle {
     font-size: 0.9rem !important;
   line-height: 1.4;
-    max-width: 280px;
-  text-align: left;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: left;
+  max-width: 260px;
 }
 
 /* ===== TABLET ===== */
