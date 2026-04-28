@@ -607,6 +607,7 @@ max-width: 500px;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  display: block;
 }
 
 .review-container {
