@@ -959,16 +959,11 @@ letter-spacing: 0.8px;
 .home .section {
   padding: 0 14px;
 }
-  
+.site-header {
+    padding-top: 40px;
+}  
 .break-desktop {
   display: inline;
-  }
-
-.subtitle {
-  font-size: 16px;   /* 👈 più piccolo */
-  line-height: 1.4;
-  max-width: 90%;
-  margin: 0 auto;
   }
   
 .hero {
