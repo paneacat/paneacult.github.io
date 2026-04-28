@@ -963,291 +963,307 @@ color: var(--gold);
 /* ===== MOBILE ===== */
 @media (max-width: 599px) {
 
-/* HOME → cinematica */
-.menu {
-flex-wrap: wrap;
-gap: 10px;
-}
+  /* ===== HOME ===== */
 
-.menu a {
-font-size: 10px;
-letter-spacing: 0.8px;
-}
-  
-.home .section {
-  padding: 0 14px;
-}
-  
-.site-header {
-padding-top: 15px;
-} 
-  
-.break-desktop {
-  display: inline;
+  .menu {
+    flex-wrap: wrap;
+    gap: 10px;
   }
-  
-.hero {
-margin: 20px auto 30px;
-padding: 0 24px;
-}
-  
-.hero h1 {
-font-size: 16px;
-line-height: 1.6;
-max-width: 95%;
-margin: 0 auto;
-}
 
-.home-grid {
-grid-template-columns: repeat(2, 1fr);
-}
-  
-.archivio-grid {
-grid-template-columns: repeat(2, 1fr);
-padding: 0 14px;
-  display: grid;
-  gap: 24px;
-}
+  .menu a {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+  }
 
-.home .card img {
-  width: 100%;
-  aspect-ratio: 16 / 9;  /* 🔥 cinematico vero */
-  object-fit: cover;
-  border-radius: 14px;
-}
+  .home .section {
+    padding: 0 14px;
+  }
 
-.home .card img {
-  aspect-ratio: 16 / 9; /* ✅ */
-}
+  .site-header {
+    padding-top: 15px;
+  }
 
-.home .card-info {
-margin-top: 10px;
-}
+  .break-desktop {
+    display: inline;
+  }
 
-.home .card-info h3 {
-font-size: 20px;
-line-height: 1.3;
-  color: var(--gold);
-}
+  .hero {
+    margin: 20px auto 30px;
+    padding: 0 24px;
+  }
 
-.home .card-info p {
-font-size: 13px;
-opacity: 0.8;
-}
-  
-.card-info {
-margin-top: 12px;
-}
+  .hero h1 {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 95%;
+    margin: 0 auto;
+  }
 
-.archivio-grid .card-info h3 {
-font-size: 14px;
-line-height: 1.3;
-}
+  .home-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-.archivio-grid .card-info p {
-font-size: 11px;
-}
+  .archivio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 14px;
+    display: grid;
+    gap: 24px;
+  }
 
-.rating {
-letter-spacing: 1.5px;
-margin-top: 6px;
-font-size: 15px;
-margin-bottom: 4px;
-}
+  .home .card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 14px;
+  }
 
-.archivio-grid .rating {
-font-size: 11px;
-letter-spacing: 1px;
-}
+  .home .card-info {
+    margin-top: 10px;
+  }
 
-.archivio-grid .card img {
-aspect-ratio: 1 / 1;
-object-fit: cover;
-border-radius: 10px;
-}
+  .home .card-info h3 {
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--gold);
+  }
 
-.newsletter {
-margin-bottom: 70px;
-margin-top: 80px;
-margin: 120px auto 60px !important;
-padding: 0 20px;
-text-align: center;
-}
-.newsletter h2 {
-font-size: 20px; 
-}
+  .home .card-info p {
+    font-size: 13px;
+    opacity: 0.8;
+  }
 
-.newsletter p {
-font-size: 13px;
-}
+  .card-info {
+    margin-top: 12px;
+  }
 
-.newsletter-btn {
-font-size: 13px;
-padding: 8px 18px; 
-}
-  
-.logo {
-font-size: 36px;  
-margin-bottom: 12px;
-}
-  
-.about-grid {
-grid-template-columns: 1fr;
-gap: 20px;
+  .archivio-grid .card-info h3 {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .archivio-grid .card-info p {
+    font-size: 11px;
+  }
+
+  .rating {
+    letter-spacing: 1.5px;
+    margin-top: 6px;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .archivio-grid .rating {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .archivio-grid .card img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* ===== NEWSLETTER ===== */
+
+  .newsletter {
+    margin-bottom: 70px;
+    margin-top: 80px;
+    margin: 120px auto 60px !important;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .newsletter h2 {
+    font-size: 20px;
+  }
+
+  .newsletter p {
+    font-size: 13px;
+  }
+
+  .newsletter-btn {
+    font-size: 13px;
+    padding: 8px 18px;
+  }
+
+  /* ===== LOGO ===== */
+
+  .logo {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  /* ===== ABOUT ===== */
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* 🔥 questo la centra davvero */
+    align-items: center;
     text-align: center;
-}
-
-.about-hero {
-  justify-content: center;
-}
-
-.about-container {
-  text-align: center;
-  max-width: 260px;   /* 👈 stringe il testo */
-  margin: 20px auto 0;
-}
-  
-  .about-hero img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-    margin-bottom: 20px;
-
   }
-  
-.about-container p {
-  margin-bottom: 10px;
-  font-size: 13px;
-  line-height: 1.6;
+
+  .about-hero {
+    justify-content: center;
+  }
+
+  .about-container {
+    text-align: center;
+    max-width: 260px;
+    margin: 20px auto 0;
+  }
+
+  .about-hero img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  .about-container p {
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .about-container .intro {
+    color: var(--gold);
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .firma-img {
+    width: 140px;
+    margin-top: 12px;
+  }
+
+  /* ===== CONTACT ===== */
+
+  .contact-container {
+    font-size: 15px; 
+    max-width: 320px;
+    margin: 60px auto 40px;
+    text-align: center;
+  }
+
+  .contact-intro {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .about-intro .line {
+    display: inline-block;
+    margin-top: 4px;
+  }
+
+  .about-intro p {
+    color: var(--gold);  
+  }
+
+  .contact-sub {
+    font-size: 16px;
+  }
+
+  .contact-email {
+    font-size: 14px;
+  }
+
+  .contact-extra {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .contact-container::before {
+    margin: 0 auto 10px;
+  }
+
+  /* ===== FILTRI ===== */
+
+  .filtri {
+    gap: 16px;
+    margin: 25px 0 30px;
+  }
+
+  .filtri-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 0 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+  }
+
+  .filtri-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filtri-row {
+    scrollbar-width: none;
+  }
+
+  .filtro {
+    flex: 0 0 auto;
+    font-size: 11px;
+    padding: 7px 14px;
+  }
+
+  /* ===== REVIEW ===== */
+
+  .subtitle {
+    text-align: left;
+    margin-left: 0;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+
+    /* 🔥 miglioramento */
+    font-size: 15px;
+    line-height: 1.4;
+    margin-top: 6px;
+    color: #9aa3a8;
+  }
+
+  .review-hero {
+    position: relative;
+  }
+
+  .review-hero img {
+    width: 100%;
+    height: 280px; /* 🔥 migliorato */
+    object-fit: cover;
+    display: block;
+    filter: contrast(1.08) brightness(0.9);
+  }
+
+  .review-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) 40%,
+      rgba(11,31,38,1) 100%
+    );
+  }
+
+  .review-container {
+    margin-top: 20px;
+    padding: 0 16px;
+  }
 }
 
-.about-container .intro {
-  color: var(--gold);
-  margin-bottom: 16px;
-  font-size: 15px;
-  line-height: 1.4;
-}
-  
-/* firma più vicina */
-.firma-img {
-  width: 140px;
-  margin-top: 12px;
-}
-  
-.contact-container {
-font-size: 15px; 
-max-width: 320px;
-margin: 60px auto 40px;
-text-align: center;
-}
-  
-.contact-intro {
-font-size: 18px;
-line-height: 1.4;
-}
-  
-.about-intro .line {
-display: inline-block;
-margin-top: 4px;
-}
-
-.about-intro p {
-color: var(--gold);  
-}
-
-.contact-sub {
-font-size: 16px;
-}
-
-.contact-email {
-font-size: 14px;
-}
-
-.contact-extra {
-font-size: 15px;
-}
-  
-.social {
-display: flex;
-justify-content: center;
-gap: 16px;
-margin-top: 16px;
-}
-  
-.contact-extra {
-text-align: center;
-}
-  
-.contact-container::before {
-margin: 0 auto 10px;
-}
-  
-/* ===== FILTRI SCROLL MOBILE ===== */
-.filtri {
-  gap: 16px;
-  margin: 25px 0 30px;
-}
-
-/* righe scrollabili */
-.filtri-row {
-  display: flex;
-  flex-wrap: nowrap; /* 🔥 niente a capo */
-  gap: 10px;
-  overflow-x: auto;
-  padding: 0 20px; /* margine visivo */
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  justify-content: flex-start; /* 🔥 importante */
-}
-
-/* nasconde scrollbar (ma scroll funziona) */
-.filtri-row::-webkit-scrollbar {
-  display: none;
-}
-.filtri-row {
-  scrollbar-width: none;
-}
-
-/* bottoni non si restringono */
-.filtro {
-  flex: 0 0 auto; /* 🔥 fondamentale */
-  font-size: 11px;
-  padding: 7px 14px;
-}
-.subtitle {
-text-align: left;
-margin-left: 0;
-white-space: normal;   /* 🔥 cambia questo */
-overflow: visible;     /* 🔥 */
-text-overflow: unset;  /* 🔥 */
-}
-
-.review-hero {
-  position: relative;
-}
-  
-.review-hero img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  display: block;
-  filter: contrast(1.05) brightness(0.95);
-}
-  
-.review-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0) 60%,
-    rgba(11,31,38,0.9) 100%
-  );
-}
 /* ===== TABLET ===== */
 @media (min-width: 600px) and (max-width: 899px) {
 
