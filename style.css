@@ -1248,8 +1248,9 @@ color: var(--gold);
 
 .review-hero img {
   width: 100%;
-  height: 260px;
+  aspect-ratio: 4 / 5; /* 🔥 più verticale e elegante */
   object-fit: cover;
+  object-position: center;
   display: block;
 
   border-radius: 16px; /* 🔥 forza coerenza */
