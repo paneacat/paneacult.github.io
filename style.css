@@ -1244,7 +1244,6 @@ color: var(--gold);
     height: 280px; /* 🔥 migliorato */
     object-fit: cover;
     display: block;
-    filter: contrast(1.08) brightness(0.9);
   }
 
   .review-hero::after {
