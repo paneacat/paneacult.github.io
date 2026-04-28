@@ -960,6 +960,10 @@ color: var(--gold);
   background: rgba(255,191,0,0.25);
 }
 
+.review-hero::after {
+  content: none !important;
+}
+
 /* ===== MOBILE ===== */
 @media (max-width: 599px) {
 
