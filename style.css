@@ -1236,15 +1236,24 @@ color: var(--gold);
   }
 
   .review-hero {
-    position: relative;
-  }
+  position: relative;
+  margin-bottom: 18px;
+}
 
-  .review-hero img {
-    width: 100%;
-    height: 280px; /* 🔥 migliorato */
-    object-fit: cover;
-    display: block;
-  }
+.review-hero img {
+  width: 100%;
+  height: 260px; /* leggermente più alto */
+  object-fit: cover;
+  object-position: center;
+  display: block;
+
+  filter: none; /* niente velo */
+
+  border-radius: 18px; /* morbido ma elegante */
+
+  /* ✨ effetto editoriale leggero */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
 
   .review-hero::after {
   display: none;
