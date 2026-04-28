@@ -974,6 +974,24 @@ color: var(--gold);
   margin-bottom: 18px;
   opacity: 0.8;
 }
+.hero-kicker {
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+.hero-kicker::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin: 8px auto 0;
+  opacity: 0.6;
+}
 /* ===== MOBILE ===== */
 @media (max-width: 599px) {
 
@@ -1281,6 +1299,11 @@ color: var(--gold);
   font-size: 10px;
   letter-spacing: 1.5px;
   margin-top: -6px;
+  }
+  .hero-kicker {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
   }
 }
 
