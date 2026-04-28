@@ -1203,17 +1203,24 @@ margin: 0 auto 10px;
 }
 
 .subtitle {
-    font-size: 0.9rem !important;
+  font-size: 0.9rem !important;
   line-height: 1.4;
+  text-align: left;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-align: left;
   max-width: 260px;
 }
 
 /* ===== TABLET ===== */
-@media (max-width: 899px) {
+@media (min-width: 600px) and (max-width: 899px) {
+
+  .subtitle {
+    text-align: left;
+    max-width: 420px;
+    font-size: 1rem;
+  }
+  
   .archivio-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1294,7 +1301,11 @@ letter-spacing: 1.8px;
   .about-container p {
   margin-bottom: 12px;
   }
-  
+
+  .subtitle {
+    max-width: 520px;
+    font-size: 1.1rem;
+  }
 /* HOME → cinematica */
   
 .home-grid {
